@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout
@@ -27,12 +27,6 @@ jobs:
       run: npx playwright test
       continue-on-error: true
 
-    # 🔥 Copy reports to your server
-    - name: Deploy reports to server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        source: "playwright-report/*"
-        target: "/opt/playwright/AutomationReports/UI/"
+    - name: Copy reports locally
+      run: |
+        cp -r playwright-report/* /opt/playwright/AutomationReports/UI/
