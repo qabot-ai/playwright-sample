@@ -1,0 +1,184 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\playwright.config.ts",
+    "rootDir": "C:/Users/mroads/Downloads/playwright-TypeScript",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\src\\main\\typescript\\helpers\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/mroads/Downloads/playwright-TypeScript/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mroads",
+        "name": "mroads",
+        "testDir": "C:/Users/mroads/Downloads/playwright-TypeScript/src/test/typescript",
+        "testIgnore": [],
+        "testMatch": [
+          "logintest*.spec.ts"
+        ],
+        "timeout": 1200000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\node_modules\\allure-playwright\\dist\\index.js",
+        null
+      ],
+      [
+        "blob",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "src\\test\\typescript\\logintest.spec.ts",
+      "file": "src/test/typescript/logintest.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login as SuperAdmin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1200000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2806,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 12:58:39: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Utility.typeText - Type Text",
+                      "duration": 160
+                    },
+                    {
+                      "title": "Utility.typeText - Type Text",
+                      "duration": 59
+                    },
+                    {
+                      "title": "Utility.click - Click on element",
+                      "duration": 188
+                    },
+                    {
+                      "title": "Utility.checkIfElementExists - Check If Element Exists",
+                      "duration": 22
+                    }
+                  ],
+                  "startTime": "2026-04-23T07:28:37.256Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "73f1ead49d97ad1b53a1-6c2586b2d7d2b769b002",
+          "file": "src/test/typescript/logintest.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-23T07:28:36.425Z",
+    "duration": 5256.923,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
