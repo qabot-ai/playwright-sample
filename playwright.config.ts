@@ -45,7 +45,7 @@ const config: PlaywrightTestConfig = {
         video: 'on', // Record video for all tests
         acceptDownloads: true,
         permissions: ['clipboard-read', 'clipboard-write'],
-    },
+            },
 
     /* Configure projects for major browsers */
     projects: [
