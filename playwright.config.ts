@@ -21,31 +21,30 @@ const config: PlaywrightTestConfig = {
         timeout: 5000,
     },
     /* Run tests in files in parallel */
-    fullyParallel: true,
+    fullyParallel: false,
+
     /* Fail the build on CI if you accidentally left test.only in the source code. */
     forbidOnly: !!process.env.CI,
-    /* Retry on CI only */
-    retries: process.env.CI ? 2 : 1,
-    /* Opt out of parallel tests on CI. */
-    workers: process.env.CI ? 1 : undefined,
+    /* Disable retries to prevent infinite loops */
+    retries: 0,
+    /* Run with 1 worker to prevent multiple Chrome instances */
+    workers: 1,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     reporter: [
-        // ['line'],
+        ['html', { open: 'never', outputFolder: 'playwright-report' }],
         ['allure-playwright'],
-        // ['junit', { outputFile: 'results1.xml' }],
-        ['blob', { open: 'never' }],
         ['json', { outputFile: 'test-results.json' }],
-        [process.env.CI === 'true' ? 'blob' : 'html', { open: 'never' }],
+        ['blob', { open: 'never' }],
     ],
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
         actionTimeout: 0,
-        screenshot: 'on',
-        trace: 'on',
+        screenshot: 'only-on-failure',
+        trace: 'on', // Capture full trace with all network info
+        video: 'on', // Record video for all tests
         acceptDownloads: true,
         permissions: ['clipboard-read', 'clipboard-write'],
-        video: 'on',
     },
 
     /* Configure projects for major browsers */
@@ -53,12 +52,13 @@ const config: PlaywrightTestConfig = {
         {
             name: 'mroads',
             testDir: './src/test/typescript',
-            testMatch: 'logintest*.spec.ts',
+            testMatch: ['logintest*.spec.ts','vendormanagement*.spec.ts'], // Include all tests
             use: {
                 channel: 'chromium',
                 acceptDownloads: true,
                 headless: false,
                 viewport: null,
+               // storageState: 'storageState.json', // ✅ ADD HERE ALSO (safe)
                 launchOptions: {
                     args: ['--start-maximized'],
                 },

@@ -1,33 +1,34 @@
 {
   "config": {
-    "configFile": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\playwright.config.ts",
-    "rootDir": "C:/Users/mroads/Downloads/playwright-TypeScript",
+    "configFile": "C:\\Users\\mroads\\playwright-sample\\playwright.config.ts",
+    "rootDir": "C:/Users/mroads/playwright-sample",
     "forbidOnly": false,
-    "fullyParallel": true,
-    "globalSetup": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\src\\main\\typescript\\helpers\\global-setup.ts",
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/mroads/Downloads/playwright-TypeScript/test-results",
+        "outputDir": "C:/Users/mroads/playwright-sample/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "mroads",
         "name": "mroads",
-        "testDir": "C:/Users/mroads/Downloads/playwright-TypeScript/src/test/typescript",
+        "testDir": "C:/Users/mroads/playwright-sample/src/test/typescript",
         "testIgnore": [],
         "testMatch": [
-          "logintest*.spec.ts"
+          "logintest*.spec.ts",
+          "vendormanagement*.spec.ts"
         ],
         "timeout": 1200000
       }
@@ -35,14 +36,15 @@
     "quiet": false,
     "reporter": [
       [
-        "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\node_modules\\allure-playwright\\dist\\index.js",
-        null
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report"
+        }
       ],
       [
-        "blob",
-        {
-          "open": "never"
-        }
+        "C:\\Users\\mroads\\playwright-sample\\node_modules\\allure-playwright\\dist\\index.js",
+        null
       ],
       [
         "json",
@@ -51,7 +53,7 @@
         }
       ],
       [
-        "html",
+        "blob",
         {
           "open": "never"
         }
@@ -92,71 +94,82 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2806,
+                  "duration": 5615,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 12:58:39: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
+                      "text": "04-23-2026 18:04:28: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
-                      "title": "Utility.typeText - Type Text",
-                      "duration": 160
+                      "title": "LoginPage.lauchURL - lauchURL",
+                      "duration": 549
                     },
                     {
-                      "title": "Utility.typeText - Type Text",
-                      "duration": 59
+                      "title": "LoginPage.performLogin - performLogin",
+                      "duration": 477,
+                      "steps": [
+                        {
+                          "title": "Utility.typeText - Type Text",
+                          "duration": 192
+                        },
+                        {
+                          "title": "Utility.typeText - Type Text",
+                          "duration": 77
+                        },
+                        {
+                          "title": "Utility.click - Click on element",
+                          "duration": 206
+                        }
+                      ]
                     },
                     {
-                      "title": "Utility.click - Click on element",
-                      "duration": 188
-                    },
-                    {
-                      "title": "Utility.checkIfElementExists - Check If Element Exists",
-                      "duration": 22
+                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
+                      "duration": 2058,
+                      "steps": [
+                        {
+                          "title": "Utility.checkIfElementExists - Check If Element Exists",
+                          "duration": 62
+                        }
+                      ]
                     }
                   ],
-                  "startTime": "2026-04-23T07:28:37.256Z",
+                  "startTime": "2026-04-23T12:34:27.207Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\test-finished-1.png"
-                    },
-                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\logintest-Login-as-SuperAdmin-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\Downloads\\playwright-TypeScript\\test-results\\logintest-Login-as-SuperAdmin-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\logintest-Login-as-SuperAdmin-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -170,13 +183,153 @@
           "column": 5
         }
       ]
+    },
+    {
+      "title": "src\\test\\typescript\\vendormanagement.spec.ts",
+      "file": "src/test/typescript/vendormanagement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "VendorManagement Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1200000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12396,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "04-23-2026 18:04:28: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:28: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:28: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:28: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:28: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:29: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:29: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-23-2026 18:04:29: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "LoginPage.lauchURL - lauchURL",
+                      "duration": 621
+                    },
+                    {
+                      "title": "LoginPage.performLogin - performLogin",
+                      "duration": 1215,
+                      "steps": [
+                        {
+                          "title": "Utility.typeText - Type Text",
+                          "duration": 461
+                        },
+                        {
+                          "title": "Utility.typeText - Type Text",
+                          "duration": 84
+                        },
+                        {
+                          "title": "Utility.click - Click on element",
+                          "duration": 668
+                        }
+                      ]
+                    },
+                    {
+                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
+                      "duration": 2425,
+                      "steps": [
+                        {
+                          "title": "Utility.checkIfElementExists - Check If Element Exists",
+                          "duration": 34
+                        }
+                      ]
+                    },
+                    {
+                      "title": "VendorManagementPage.navigateToVendor - Navigate to Vendor Page",
+                      "duration": 685
+                    },
+                    {
+                      "title": "VendorManagementPage.addVendor - Add Vendor",
+                      "duration": 2368
+                    },
+                    {
+                      "title": "VendorManagementPage.editVendor - Edit Vendor",
+                      "duration": 2269
+                    },
+                    {
+                      "title": "VendorManagementPage.searchVendor - Search Vendor",
+                      "duration": 67
+                    },
+                    {
+                      "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
+                      "duration": 453
+                    },
+                    {
+                      "title": "VendorManagementPage.deleteVendor - Delete Vendor",
+                      "duration": 566
+                    },
+                    {
+                      "title": "VendorManagementPage.clearFilters - Clear Filters",
+                      "duration": 330
+                    }
+                  ],
+                  "startTime": "2026-04-23T12:34:27.204Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-67812771364c221c45ef",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-23T07:28:36.425Z",
-    "duration": 5256.923,
-    "expected": 1,
+    "startTime": "2026-04-23T12:34:26.328Z",
+    "duration": 14177.151,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
