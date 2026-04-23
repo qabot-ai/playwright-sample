@@ -12,7 +12,7 @@ const config: PlaywrightTestConfig = {
     globalSetup: require.resolve('./src/main/typescript/helpers/global-setup.ts'),
 
     /* Maximum time one test can run for. */
-    timeout: 1200000,
+    timeout: 120000,
     expect: {
         /**
          * Maximum time expect() should wait for the condition to be met.
@@ -39,7 +39,7 @@ const config: PlaywrightTestConfig = {
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
-        actionTimeout: 0,
+        actionTimeout: 15000,
         screenshot: 'only-on-failure',
         trace: 'on', // Capture full trace with all network info
         video: 'on', // Record video for all tests
