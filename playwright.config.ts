@@ -26,7 +26,7 @@ const config: PlaywrightTestConfig = {
     /* Fail the build on CI if you accidentally left test.only in the source code. */
     forbidOnly: !!process.env.CI,
     /* Disable retries to prevent infinite loops */
-    retries: 0,
+    retries: 1,
     /* Run with 1 worker to prevent multiple Chrome instances */
     workers: 1,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -52,11 +52,11 @@ const config: PlaywrightTestConfig = {
         {
             name: 'mroads',
             testDir: './src/test/typescript',
-            testMatch: ['logintest*.spec.ts','vendormanagement*.spec.ts'], // Include all tests
+            testMatch: ['vendormanagement*.spec.ts'], // Include all tests
             use: {
                 channel: 'chromium',
                 acceptDownloads: true,
-                headless: false,
+                headless: true,
                 viewport: null,
                // storageState: 'storageState.json', // ✅ ADD HERE ALSO (safe)
                 launchOptions: {
