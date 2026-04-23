@@ -52,7 +52,7 @@ jobs:
           name: test-results.json
           path: test-results.json
 
-      - name: Copy reports to FreighConsol folder structure
+      - name: Copy reports to FreightConsol folder structure
         if: ${{ always() }}
         run: |
           BASE_DIR="/opt/playwright/AutomationReports/Freight_CONSOL"
@@ -60,8 +60,8 @@ jobs:
           # Ensure base directory exists
           mkdir -p "$BASE_DIR"
 
-          # Date format: yyyy.mm.dd
-          TODAY=$(date +%Y.%m.%d)
+          # Date format: YYYYMMDD
+          TODAY=$(date +%Y%m%d)
 
           # Find last run number for today
           LAST_NUM=$(ls -1 $BASE_DIR 2>/dev/null | grep "FreighConsol-$TODAY" | awk -F. '{print $NF}' | sort -n | tail -1)
@@ -80,5 +80,7 @@ jobs:
 
           mkdir -p "$TARGET_DIR"
 
-          # Copy report (no permission issues)
-          rsync -rltv playwright-report/ "$TARGET_DIR/"
+          # Copy all required artifacts
+          rsync -rltv playwright-report/ "$TARGET_DIR/playwright-report/"
+          rsync -rltv test-results/ "$TARGET_DIR/test-results/"
+          cp test-results.json "$TARGET_DIR/"
