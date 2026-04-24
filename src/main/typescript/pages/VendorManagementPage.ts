@@ -25,41 +25,108 @@ export class VendorManagementPage extends BasePage
   @step('Navigate to Vendor Page')
   async navigateToVendor() 
   {
-    await this.vendorMenu().click();
+    // Wait for the page to load and ensure menu is visible
+    await this.page.waitForLoadState('networkidle');
+    
+    // Wait for the vendor menu link to be visible with timeout
+    const vendorMenu = this.vendorMenu();
+    await vendorMenu.waitFor({ state: 'visible', timeout: 10000 });
+    
+    // Click the vendor menu
+    await vendorMenu.click();
+    
+    // Wait for vendor page to load
+    await this.page.waitForLoadState('networkidle');
   }
  @step('Add Vendor')
   async addVendor() 
   {
+    // Wait for add vendor button to be visible
+    await this.addVendorBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.addVendorBtn().click();
+    
+    // Wait for form to load
+    await this.page.waitForLoadState('networkidle');
+    
+    // Fill vendor details
+    await this.vendorName().waitFor({ state: 'visible', timeout: 10000 });
     await this.vendorName().fill('Lalithaaaaaaaaaa');
     await this.vendorDisplayName().fill('Jampanaaaaaaa');
     await this.vendorCode().fill('LARRR');
     await this.chargeCode().fill('ABC,BCA');
+    
+    // Select vendor type
     await this.vendorTypeDropdown().click();
-    await this.truckersOption().click();
+    await this.page.waitForLoadState('networkidle');
+    
+    // Scroll the option into view and click it
+    const truckersOption = this.truckersOption();
+    await truckersOption.waitFor({ state: 'visible', timeout: 10000 });
+    await truckersOption.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(500); // Small delay to ensure element is ready
+    await truckersOption.click();
+    
+    // Fill remaining fields
     await this.email().fill('lalithajam1@yopmail.com');
     await this.address().fill('Hyderabad');
+    
+    // Save the vendor
     await this.saveBtn().click();
+    await this.okBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.okBtn().click();
+    
+    // Wait for page to return to vendor list
+    await this.page.waitForLoadState('networkidle');
   }
   @step('Edit Vendor')
   async editVendor() 
   {
-    await this.editBtn().click();
+    // Wait for the vendor list to fully load
+    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForTimeout(1000); // Extra delay for list to render
+    
+    // Wait for edit button to be visible with increased timeout
+    const editBtn = this.editBtn();
+    await editBtn.waitFor({ state: 'visible', timeout: 15000 });
+    
+    // Scroll into view and click
+    await editBtn.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(500);
+    await editBtn.click();
+    
+    // Wait for edit form to load
+    await this.page.waitForLoadState('networkidle');
+    await this.vendorDisplayName().waitFor({ state: 'visible', timeout: 10000 });
+    
+    // Fill updated information
     await this.vendorDisplayName().fill('Jampanaaa');
     await this.vendorName().fill('Lalithaa');
     await this.email().fill('lalithajamp11s@yopmail.com');
+    
+    // Update vendor
     await this.updateBtn().click();
+    await this.okBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.okBtn().click();
+    
+    // Wait for page to return to vendor list
+    await this.page.waitForLoadState('networkidle');
   }
   @step('Search Vendor')
   async searchVendor() {
+    await this.searchBox().waitFor({ state: 'visible', timeout: 10000 });
     await this.searchBox().fill('jampanaa');
     await this.searchBox().press('Enter');
+    
+    // Wait for search results to load
+    await this.page.waitForLoadState('networkidle');
   }
   @step('Validate Vendor Details')
   async validateVendor() {
+    // Wait for table to load
     const table = this.page.locator('tbody');
+    await table.waitFor({ state: 'visible', timeout: 10000 });
+    
+    // Validate vendor details
     await expect(table).toContainText('Jampanaa');
     await expect(table).toContainText('LARRR');
     await expect(table).toContainText('Truckers');
@@ -69,16 +136,31 @@ export class VendorManagementPage extends BasePage
   }
   @step('Delete Vendor')
   async deleteVendor() {
+    // Wait for delete button to be visible
+    await this.deleteBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.deleteBtn().click();
+    
+    // Confirm deletion
+    await this.yesBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.yesBtn().click();
 
+    // Wait for success message
     await expect(this.page.getByRole('paragraph'))
       .toContainText('Vendor deleted successfully.');
 
+    // Click OK to close confirmation
+    await this.okBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.okBtn().click();
+    
+    // Wait for page to return to vendor list
+    await this.page.waitForLoadState('networkidle');
   }
   @step('Clear Filters')
   async clearFilters() {
+    await this.clearFiltersBtn().waitFor({ state: 'visible', timeout: 10000 });
     await this.clearFiltersBtn().click();
+    
+    // Wait for page to reload after clearing filters
+    await this.page.waitForLoadState('networkidle');
   }
 }

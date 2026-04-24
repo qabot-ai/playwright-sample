@@ -7,7 +7,8 @@ private readonly Dashboardheader="//h1[text()='Dashboard']";
 @step('dashboardHeaderVisibilty')
  async dashboardHeaderVisibilty()
  {
-      await this.utility.checkIfElementExists({selector: this.Dashboardheader}) 
+      await this.page.waitForLoadState('networkidle');
+      await this.utility.checkIfElementExists({selector: this.Dashboardheader})
       await expect(this.page.locator(this.Dashboardheader)).toBeVisible();        
 }
 }

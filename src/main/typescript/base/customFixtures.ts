@@ -5,6 +5,7 @@ import { Utility } from '../helpers/Utility'
 import { LoginPage } from '../pages/LoginPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import { VendorManagementPage } from '../pages/VendorManagementPage'
+import ENV from '../../resources/env/env'
 
 /**
  * Declare the Pages that you want to use in your test
@@ -15,6 +16,7 @@ type MyFixtures = {
     loginPage: LoginPage
     dashboardPage: DashboardPage
     vendormanagementPage: VendorManagementPage
+    ENV: typeof ENV
 }
 
 /**
@@ -35,5 +37,8 @@ export const test = base.extend<MyFixtures>({
          {
         return await use(new VendorManagementPage(page))
     },
+    ENV: async ({}, use) => {
+        return await use(ENV)
+    }
 })
 export { expect } from '@playwright/test'

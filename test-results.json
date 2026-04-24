@@ -78,8 +78,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Login",
-          "ok": false,
+          "title": "Dashboard Header Visibility",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -92,269 +92,61 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 12176,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4",
-                    "location": {
-                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                      "column": 61,
-                      "line": 11
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                        "column": 61,
-                        "line": 11
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m\n\u001b[2m    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 3374,
+                  "errors": [],
                   "stdout": [
                     {
-                      "text": "04-23-2026 23:02:28: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
+                      "text": "04-24-2026 13:02:51: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 23:02:28: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
+                      "text": "04-24-2026 13:02:51: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-23-2026 23:02:28: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:28: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:28: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:28: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:28: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:28: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
+                      "text": "04-24-2026 13:02:51: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
-                      "title": "LoginPage.lauchURL - lauchURL",
-                      "duration": 6483
-                    },
-                    {
-                      "title": "LoginPage.performLogin - performLogin",
-                      "duration": 252,
-                      "steps": [
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 147
-                        },
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 41
-                        },
-                        {
-                          "title": "Utility.click - Click on element",
-                          "duration": 62
-                        }
-                      ]
-                    },
-                    {
                       "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 5056,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4",
-                        "location": {
-                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                          "column": 61,
-                          "line": 11
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                      },
+                      "duration": 1954,
                       "steps": [
                         {
                           "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 28
+                          "duration": 120
                         }
                       ]
                     }
                   ],
-                  "startTime": "2026-04-23T17:32:21.592Z",
+                  "startTime": "2026-04-24T07:32:48.858Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads\\test-failed-1.png"
-                    },
-                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads\\error-context.md"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                    "column": 61,
-                    "line": 11
-                  }
-                },
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 8994,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4",
-                    "location": {
-                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                      "column": 61,
-                      "line": 11
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                        "column": 61,
-                        "line": 11
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m\n\u001b[2m    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:38: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "LoginPage.lauchURL - lauchURL",
-                      "duration": 3300
-                    },
-                    {
-                      "title": "LoginPage.performLogin - performLogin",
-                      "duration": 209,
-                      "steps": [
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 100
-                        },
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 35
-                        },
-                        {
-                          "title": "Utility.click - Click on element",
-                          "duration": 73
-                        }
-                      ]
-                    },
-                    {
-                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 5058,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:7:4",
-                        "location": {
-                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                          "column": 61,
-                          "line": 11
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                      },
-                      "steps": [
-                        {
-                          "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 25
-                        }
-                      ]
-                    }
-                  ],
-                  "startTime": "2026-04-23T17:32:34.898Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads-retry1\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads-retry1\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Login-mroads-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                    "column": 61,
-                    "line": 11
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "e6ab5486355e25f77599-7eeeb5d8f2160a7756f2",
+          "id": "e6ab5486355e25f77599-5158b9c1db404b6be3d3",
           "file": "src/test/typescript/vendormanagement.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "VendorManagement Flow",
-          "ok": false,
+          "title": "Navigate to Vendor Management Page",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -365,278 +157,450 @@
               "projectName": "mroads",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 10263,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4",
-                    "location": {
-                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                      "column": 61,
-                      "line": 11
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 2738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-24T07:32:52.561Z",
+                  "annotations": [],
+                  "attachments": [
                     {
-                      "location": {
-                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                        "column": 61,
-                        "line": 11
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m\n\u001b[2m    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4\u001b[22m"
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\trace.zip"
                     }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:02:50: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
-                    }
-                  ],
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-0110d354e8cdc45f324b",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "Add New Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5263,
+                  "errors": [],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
-                      "title": "LoginPage.lauchURL - lauchURL",
-                      "duration": 4602
-                    },
-                    {
-                      "title": "LoginPage.performLogin - performLogin",
-                      "duration": 242,
-                      "steps": [
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 110
-                        },
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 39
-                        },
-                        {
-                          "title": "Utility.click - Click on element",
-                          "duration": 92
-                        }
-                      ]
-                    },
-                    {
-                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 5048,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4",
-                        "location": {
-                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                          "column": 61,
-                          "line": 11
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                      },
-                      "steps": [
-                        {
-                          "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 26
-                        }
-                      ]
+                      "title": "VendorManagementPage.addVendor - Add Vendor",
+                      "duration": 2407
                     }
                   ],
-                  "startTime": "2026-04-23T17:32:45.151Z",
+                  "startTime": "2026-04-24T07:32:55.475Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\test-failed-1.png"
-                    },
-                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\error-context.md"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                    "column": 61,
-                    "line": 11
-                  }
-                },
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 11244,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4",
-                    "location": {
-                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                      "column": 61,
-                      "line": 11
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                        "column": 61,
-                        "line": 11
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m\n\u001b[2m    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mTrying to get the selector //input[@id='email'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mSent Text superadmin@yopmail.com to element //input[@id='email']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mTrying to get the selector //input[@id='password'] \u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mSent Text Test@1234 to element //input[@id='password']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mClicking on element with selector //button[text()='LOGIN']\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32melement with selector //h1[text()='Dashboard'] does not exist\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-23-2026 23:03:02: \u001b[32melement with selector //h1[text()='Dashboard'] is not visible\u001b[39m\r\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "LoginPage.lauchURL - lauchURL",
-                      "duration": 5334
-                    },
-                    {
-                      "title": "LoginPage.performLogin - performLogin",
-                      "duration": 228,
-                      "steps": [
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 104
-                        },
-                        {
-                          "title": "Utility.typeText - Type Text",
-                          "duration": 33
-                        },
-                        {
-                          "title": "Utility.click - Click on element",
-                          "duration": 89
-                        }
-                      ]
-                    },
-                    {
-                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 5056,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h1[text()=\\'Dashboard\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h1[text()=\\'Dashboard\\']')\u001b[22m\n\n    at DashboardPage.dashboardHeaderVisibilty (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts:11:61)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts:14:4",
-                        "location": {
-                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                          "column": 61,
-                          "line": 11
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\DashboardPage.ts:11\n\n\u001b[0m \u001b[90m  9 |\u001b[39m  {\n \u001b[90m 10 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mutility\u001b[33m.\u001b[39mcheckIfElementExists({selector\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m}) \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mDashboardheader\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m        \n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m }\n \u001b[90m 13 |\u001b[39m }\u001b[0m"
-                      },
-                      "steps": [
-                        {
-                          "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 31
-                        }
-                      ]
-                    }
-                  ],
-                  "startTime": "2026-04-23T17:32:56.543Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads-retry1\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads-retry1\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads-retry1\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-VendorManagement-Flow-mroads-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\DashboardPage.ts",
-                    "column": 61,
-                    "line": 11
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "e6ab5486355e25f77599-67812771364c221c45ef",
+          "id": "e6ab5486355e25f77599-cc59c63233d8bee8127e",
           "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 10,
-          "column": 7
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "Search for Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2730,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.searchVendor - Search Vendor",
+                      "duration": 99
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:00.886Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-1de13a57285d8296f6a1",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "Edit Vendor Information",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6555,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.editVendor - Edit Vendor",
+                      "duration": 3758
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:03.700Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-8875761c50e6c104e373",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "Validate Edited Vendor Details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2844,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
+                      "duration": 115
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:10.376Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-c1357fe178cfb55d3a43",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "Search for Edited Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.searchVendor - Search Vendor",
+                      "duration": 104
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:13.298Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-c1719ba8275255f82ec8",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 85,
+          "column": 5
+        },
+        {
+          "title": "Delete Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.deleteVendor - Delete Vendor",
+                      "duration": 1114
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:16.519Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-1da0573ed56ed72e7545",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 110,
+          "column": 5
+        },
+        {
+          "title": "Search for Deleted Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-24T07:33:20.690Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-2909811415ddbce25a68",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 122,
+          "column": 5
+        },
+        {
+          "title": "Clear Vendor Filters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3195,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.clearFilters - Clear Filters",
+                      "duration": 99
+                    }
+                  ],
+                  "startTime": "2026-04-24T07:33:23.732Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Vendor-Filters-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Vendor-Filters-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-4ec8a0abc294fc50fa72",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 140,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-23T17:32:20.882Z",
-    "duration": 47394.025,
-    "expected": 0,
+    "startTime": "2026-04-24T07:32:44.567Z",
+    "duration": 42683.115999999995,
+    "expected": 10,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 0,
     "flaky": 0
   }
 }

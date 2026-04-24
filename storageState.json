@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://dev-freight.wendai.ai",
+      "localStorage": [
+        {
+          "name": "sb-vxixaacivacdmttfbhej-auth-token",
+          "value": "{\"access_token\":\"eyJhbGciOiJFUzI1NiIsImtpZCI6IjJmYmRlMDgwLWYwN2EtNGUwOC1iNjRkLTM4YTM5MTJmZDM4ZiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Z4aXhhYWNpdmFjZG10dGZiaGVqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIzNjZjZTQzOC03OTE3LTQ0OTktYjQ1NS1hMmY5YzRmMDBhMzYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MDE5NTY3LCJpYXQiOjE3NzcwMTU5NjcsImVtYWlsIjoic3VwZXJhZG1pbkB5b3BtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzX2ZpcnN0X2xvZ2luIjpmYWxzZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzcwMTU5Njd9XSwic2Vzc2lvbl9pZCI6ImZjZDFjMWU0LTZmOTgtNDQ2NC04YTBjLTNlOTY1YzE1OTc1ZCIsImlzX2Fub255bW91cyI6ZmFsc2V9.d6o-rC_rSzDcJaS_KIJvGh0isXAO5iTdkAQD_k0b7faabnZdqKUklTP1hvUunydcWOvbIyCKZUZ3inO2Jb9YwQ\",\"token_type\":\"bearer\",\"expires_in\":3600,\"expires_at\":1777019567,\"refresh_token\":\"ki2gszubdoy2\",\"user\":{\"id\":\"366ce438-7917-4499-b455-a2f9c4f00a36\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"superadmin@yopmail.com\",\"email_confirmed_at\":\"2025-09-25T13:26:42.990911Z\",\"phone\":\"\",\"confirmed_at\":\"2025-09-25T13:26:42.990911Z\",\"recovery_sent_at\":\"2026-02-06T06:42:56.021133Z\",\"last_sign_in_at\":\"2026-04-24T07:32:47.932318909Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email_verified\":true,\"is_first_login\":false},\"identities\":[{\"identity_id\":\"f224e951-e7ce-45f9-a8d4-313b8be2526c\",\"id\":\"366ce438-7917-4499-b455-a2f9c4f00a36\",\"user_id\":\"366ce438-7917-4499-b455-a2f9c4f00a36\",\"identity_data\":{\"email\":\"superadmin@yopmail.com\",\"email_verified\":false,\"phone_verified\":false,\"sub\":\"366ce438-7917-4499-b455-a2f9c4f00a36\"},\"provider\":\"email\",\"last_sign_in_at\":\"2025-09-25T13:26:42.987886Z\",\"created_at\":\"2025-09-25T13:26:42.987942Z\",\"updated_at\":\"2025-09-25T13:26:42.987942Z\",\"email\":\"superadmin@yopmail.com\"}],\"created_at\":\"2025-09-25T13:26:42.986117Z\",\"updated_at\":\"2026-04-24T07:32:47.935472Z\",\"is_anonymous\":false},\"weak_password\":null}"
+        },
+        {
+          "name": "sidebarExpanded",
+          "value": "false"
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
+import dotenv from 'dotenv'
+
+// Load environment variables from .env.dev by default
+dotenv.config({
+    path: `./src/main/resources/env/.env.${process.env.environmentToRun || 'dev'}`,
+    override: false,
+})
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -39,12 +41,13 @@ const config: PlaywrightTestConfig = {
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
-        actionTimeout: 15000,
+        actionTimeout: 30000,
         screenshot: 'only-on-failure',
         trace: 'on', // Capture full trace with all network info
         video: 'on', // Record video for all tests
         acceptDownloads: true,
         permissions: ['clipboard-read', 'clipboard-write'],
+        storageState: process.env.CI ? 'storageState.json' : 'storageState.json', // Created by globalSetup
             },
 
     /* Configure projects for major browsers */
@@ -58,7 +61,7 @@ const config: PlaywrightTestConfig = {
                 acceptDownloads: true,
                 headless: true,
                 viewport: null,
-               // storageState: 'storageState.json', // ✅ ADD HERE ALSO (safe)
+        
                 launchOptions: {
                     args: ['--start-maximized'],
                 },
