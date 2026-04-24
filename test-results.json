@@ -67,7 +67,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.59.1",
-    "workers": 3,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
@@ -97,13 +97,13 @@
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "04-24-2026 13:02:51: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                      "text": "04-24-2026 14:54:02: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-24-2026 13:02:51: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
+                      "text": "04-24-2026 14:54:03: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
                     },
                     {
-                      "text": "04-24-2026 13:02:51: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
+                      "text": "04-24-2026 14:54:03: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
                     }
                   ],
                   "stderr": [],
@@ -111,18 +111,23 @@
                   "steps": [
                     {
                       "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 1954,
+                      "duration": 1828,
                       "steps": [
                         {
                           "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 120
+                          "duration": 109
                         }
                       ]
                     }
                   ],
-                  "startTime": "2026-04-24T07:32:48.858Z",
+                  "startTime": "2026-04-24T09:23:59.540Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -160,14 +165,19 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2738,
+                  "duration": 2518,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-24T07:32:52.561Z",
+                  "startTime": "2026-04-24T09:24:03.680Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -205,7 +215,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5263,
+                  "duration": 5213,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -213,12 +223,17 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.addVendor - Add Vendor",
-                      "duration": 2407
+                      "duration": 2386
                     }
                   ],
-                  "startTime": "2026-04-24T07:32:55.475Z",
+                  "startTime": "2026-04-24T09:24:06.289Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -241,7 +256,7 @@
           "column": 5
         },
         {
-          "title": "Search for Vendor",
+          "title": "Search for Added Vendor",
           "ok": true,
           "tags": [],
           "tests": [
@@ -256,7 +271,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2730,
+                  "duration": 2759,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -264,21 +279,26 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.searchVendor - Search Vendor",
-                      "duration": 99
+                      "duration": 100
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:00.886Z",
+                  "startTime": "2026-04-24T09:24:11.776Z",
                   "annotations": [],
                   "attachments": [
                     {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Vendor-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Vendor-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -286,7 +306,7 @@
               "status": "expected"
             }
           ],
-          "id": "e6ab5486355e25f77599-1de13a57285d8296f6a1",
+          "id": "e6ab5486355e25f77599-7c879b534ebf035beef4",
           "file": "src/test/typescript/vendormanagement.spec.ts",
           "line": 33,
           "column": 5
@@ -307,7 +327,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6555,
+                  "duration": 6486,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -315,12 +335,17 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.editVendor - Edit Vendor",
-                      "duration": 3758
+                      "duration": 3763
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:03.700Z",
+                  "startTime": "2026-04-24T09:24:14.637Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -358,7 +383,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2844,
+                  "duration": 2617,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -366,12 +391,17 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
-                      "duration": 115
+                      "duration": 101
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:10.376Z",
+                  "startTime": "2026-04-24T09:24:21.236Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -409,7 +439,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3132,
+                  "duration": 2622,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -417,12 +447,17 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.searchVendor - Search Vendor",
-                      "duration": 104
+                      "duration": 89
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:13.298Z",
+                  "startTime": "2026-04-24T09:24:23.937Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -460,7 +495,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4079,
+                  "duration": 3826,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -468,12 +503,17 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.deleteVendor - Delete Vendor",
-                      "duration": 1114
+                      "duration": 1141
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:16.519Z",
+                  "startTime": "2026-04-24T09:24:26.659Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -511,14 +551,19 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2968,
+                  "duration": 2642,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-24T07:33:20.690Z",
+                  "startTime": "2026-04-24T09:24:30.590Z",
                   "annotations": [],
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -541,7 +586,7 @@
           "column": 5
         },
         {
-          "title": "Clear Vendor Filters",
+          "title": "Clear Filters",
           "ok": true,
           "tags": [],
           "tests": [
@@ -556,7 +601,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3195,
+                  "duration": 2599,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -564,21 +609,26 @@
                   "steps": [
                     {
                       "title": "VendorManagementPage.clearFilters - Clear Filters",
-                      "duration": 99
+                      "duration": 105
                     }
                   ],
-                  "startTime": "2026-04-24T07:33:23.732Z",
+                  "startTime": "2026-04-24T09:24:33.317Z",
                   "annotations": [],
                   "attachments": [
                     {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\test-finished-1.png"
+                    },
+                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Vendor-Filters-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Vendor-Filters-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -586,7 +636,7 @@
               "status": "expected"
             }
           ],
-          "id": "e6ab5486355e25f77599-4ec8a0abc294fc50fa72",
+          "id": "e6ab5486355e25f77599-451c04c4f235e7351ae2",
           "file": "src/test/typescript/vendormanagement.spec.ts",
           "line": 140,
           "column": 5
@@ -596,8 +646,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-24T07:32:44.567Z",
-    "duration": 42683.115999999995,
+    "startTime": "2026-04-24T09:23:51.851Z",
+    "duration": 44394.638,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,

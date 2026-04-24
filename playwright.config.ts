@@ -42,7 +42,7 @@ const config: PlaywrightTestConfig = {
     use: {
         /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
         actionTimeout: 30000,
-        screenshot: 'only-on-failure',
+        screenshot: 'on',
         trace: 'on', // Capture full trace with all network info
         video: 'on', // Record video for all tests
         acceptDownloads: true,
