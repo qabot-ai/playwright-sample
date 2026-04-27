@@ -35,9 +35,16 @@ export class AddAdminPage extends BasePage
   }
 
   @step('Add Admin User')
-  async addAdmin(fullName: string = 'Lalitha Jampana', email: string = 'lalithaadmin@yopmail.com', 
-                 phone: string = '9876543210', username: string = 'lalithaadmin')
-  {
+  async addAdmin()
+  { // Generate random values
+  const random5Digits = Math.floor(10000 + Math.random() * 90000); // 5 digits
+  const random7Digits = Math.floor(1000000 + Math.random() * 9000000); // 7 digits
+
+  // Unique test data
+  const fullName = 'Lalitha'+random5Digits;
+  const phone = '984'+random7Digits;
+  const email = "lalliadmin"+random5Digits+"@yopmail.com";
+  const username = 'lalithaadmin'+random5Digits;
     await this.page.waitForLoadState('networkidle');
     
     // Fill form fields
@@ -58,7 +65,7 @@ export class AddAdminPage extends BasePage
     await timeZoneOption.waitFor({ state: 'visible', timeout: 5000 });
     await timeZoneOption.click();
     
-    // Set as Active
+    // Set as Active`
     await this.activeRadioBtn().check();
     
     // Save Admin
