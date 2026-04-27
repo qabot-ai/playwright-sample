@@ -27,7 +27,7 @@
         "testDir": "C:/Users/mroads/playwright-sample/src/test/typescript",
         "testIgnore": [],
         "testMatch": [
-          "vendormanagement*.spec.ts"
+          "addadmin*.spec.ts"
         ],
         "timeout": 120000
       }
@@ -72,13 +72,13 @@
   },
   "suites": [
     {
-      "title": "src\\test\\typescript\\vendormanagement.spec.ts",
-      "file": "src/test/typescript/vendormanagement.spec.ts",
+      "title": "src\\test\\typescript\\addadmin.spec.ts",
+      "file": "src/test/typescript/addadmin.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Dashboard Header Visibility",
+          "title": "Navigate to Admin Page",
           "ok": true,
           "tags": [],
           "tests": [
@@ -93,50 +93,32 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3374,
+                  "duration": 5005,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "04-24-2026 14:54:02: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-24-2026 14:54:03: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
-                    },
-                    {
-                      "text": "04-24-2026 14:54:03: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
+                      "text": "✅ Navigated to Admin page successfully\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "steps": [
-                    {
-                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
-                      "duration": 1828,
-                      "steps": [
-                        {
-                          "title": "Utility.checkIfElementExists - Check If Element Exists",
-                          "duration": 109
-                        }
-                      ]
-                    }
-                  ],
-                  "startTime": "2026-04-24T09:23:59.540Z",
+                  "startTime": "2026-04-27T07:27:16.146Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\test-finished-1.png"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -144,14 +126,14 @@
               "status": "expected"
             }
           ],
-          "id": "e6ab5486355e25f77599-5158b9c1db404b6be3d3",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 3,
+          "id": "17c4bc913a4f7bbdb3e9-598bd4168bf53b8d747b",
+          "file": "src/test/typescript/addadmin.spec.ts",
+          "line": 4,
           "column": 5
         },
         {
-          "title": "Navigate to Vendor Management Page",
-          "ok": true,
+          "title": "Add New Admin User",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -164,481 +146,137 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2518,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-04-24T09:24:03.680Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\test-finished-1.png"
+                  "status": "failed",
+                  "duration": 12475,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: '(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: '(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi' }) to be visible\u001b[22m\n\n    at AddAdminPage.addAdmin (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts:58:26)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts:25:3",
+                    "location": {
+                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts",
+                      "column": 26,
+                      "line": 58
                     },
+                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\AddAdminPage.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m     \u001b[36mconst\u001b[39m timeZoneOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[90m// Set as Active\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\trace.zip"
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts",
+                        "column": 26,
+                        "line": 58
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: '(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\AddAdminPage.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m     \u001b[36mconst\u001b[39m timeZoneOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[90m// Set as Active\u001b[39m\u001b[0m\n\u001b[2m    at AddAdminPage.addAdmin (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts:58:26)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts:25:3\u001b[22m"
                     }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-0110d354e8cdc45f324b",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 12,
-          "column": 5
-        },
-        {
-          "title": "Add New Vendor",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5213,
-                  "errors": [],
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
-                      "title": "VendorManagementPage.addVendor - Add Vendor",
-                      "duration": 2386
+                      "title": "AddAdminPage.addAdmin - Add Admin User",
+                      "duration": 6173,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: '(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi' }) to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: '(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi' }) to be visible\u001b[22m\n\n    at AddAdminPage.addAdmin (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts:58:26)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:24\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts:25:3",
+                        "location": {
+                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts",
+                          "column": 26,
+                          "line": 58
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\AddAdminPage.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m     \u001b[36mconst\u001b[39m timeZoneOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mawait\u001b[39m timeZoneOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[90m// Set as Active\u001b[39m\u001b[0m"
+                      }
                     }
                   ],
-                  "startTime": "2026-04-24T09:24:06.289Z",
+                  "startTime": "2026-04-27T07:27:22.182Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\test-finished-1.png"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-cc59c63233d8bee8127e",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 23,
-          "column": 5
-        },
-        {
-          "title": "Search for Added Vendor",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2759,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "VendorManagementPage.searchVendor - Search Vendor",
-                      "duration": 100
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\trace.zip"
                     }
                   ],
-                  "startTime": "2026-04-24T09:24:11.776Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Added-Vendor-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-7c879b534ebf035beef4",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 33,
-          "column": 5
-        },
-        {
-          "title": "Edit Vendor Information",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
+                  "errorLocation": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\AddAdminPage.ts",
+                    "column": 26,
+                    "line": 58
+                  }
+                },
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6486,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
+                  "status": "failed",
+                  "duration": 2621,
+                  "error": {
+                    "message": "Error: page.waitForLoadState: Target page, context or browser has been closed",
+                    "stack": "Error: page.waitForLoadState: Target page, context or browser has been closed\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts:22:14",
+                    "location": {
+                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts",
+                      "column": 14,
+                      "line": 22
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m adminUrl \u001b[33m=\u001b[39m \u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m\u001b[33m.\u001b[39mreplace(\u001b[32m'/login'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'/add-admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(adminUrl)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   \n \u001b[90m 24 |\u001b[39m   \u001b[90m// Add a new admin with custom parameters\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m addadminPage\u001b[33m.\u001b[39maddAdmin()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "title": "VendorManagementPage.editVendor - Edit Vendor",
-                      "duration": 3763
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts",
+                        "column": 14,
+                        "line": 22
+                      },
+                      "message": "Error: page.waitForLoadState: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m adminUrl \u001b[33m=\u001b[39m \u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m\u001b[33m.\u001b[39mreplace(\u001b[32m'/login'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'/add-admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(adminUrl)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   \n \u001b[90m 24 |\u001b[39m   \u001b[90m// Add a new admin with custom parameters\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m addadminPage\u001b[33m.\u001b[39maddAdmin()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts:22:14\u001b[22m"
                     }
                   ],
-                  "startTime": "2026-04-24T09:24:14.637Z",
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-04-27T07:27:37.087Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\test-finished-1.png"
-                    },
-                    {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads-retry1\\error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-8875761c50e6c104e373",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 59,
-          "column": 5
-        },
-        {
-          "title": "Validate Edited Vendor Details",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2617,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
-                      "duration": 101
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads-retry1\\trace.zip"
                     }
                   ],
-                  "startTime": "2026-04-24T09:24:21.236Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\trace.zip"
-                    }
-                  ]
+                  "errorLocation": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\addadmin.spec.ts",
+                    "column": 14,
+                    "line": 22
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "e6ab5486355e25f77599-c1357fe178cfb55d3a43",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 69,
-          "column": 5
-        },
-        {
-          "title": "Search for Edited Vendor",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2622,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "VendorManagementPage.searchVendor - Search Vendor",
-                      "duration": 89
-                    }
-                  ],
-                  "startTime": "2026-04-24T09:24:23.937Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Edited-Vendor-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-c1719ba8275255f82ec8",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 85,
-          "column": 5
-        },
-        {
-          "title": "Delete Vendor",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3826,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "VendorManagementPage.deleteVendor - Delete Vendor",
-                      "duration": 1141
-                    }
-                  ],
-                  "startTime": "2026-04-24T09:24:26.659Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-1da0573ed56ed72e7545",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 110,
-          "column": 5
-        },
-        {
-          "title": "Search for Deleted Vendor",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2642,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-04-24T09:24:30.590Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-2909811415ddbce25a68",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 122,
-          "column": 5
-        },
-        {
-          "title": "Clear Filters",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mroads",
-              "projectName": "mroads",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2599,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "VendorManagementPage.clearFilters - Clear Filters",
-                      "duration": 105
-                    }
-                  ],
-                  "startTime": "2026-04-24T09:24:33.317Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6ab5486355e25f77599-451c04c4f235e7351ae2",
-          "file": "src/test/typescript/vendormanagement.spec.ts",
-          "line": 140,
+          "id": "17c4bc913a4f7bbdb3e9-3baa3a7cd37fc402f65d",
+          "file": "src/test/typescript/addadmin.spec.ts",
+          "line": 17,
           "column": 5
         }
       ]
@@ -646,11 +284,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-24T09:23:51.851Z",
-    "duration": 44394.638,
-    "expected": 10,
+    "startTime": "2026-04-27T07:27:09.341Z",
+    "duration": 31771.915999999997,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

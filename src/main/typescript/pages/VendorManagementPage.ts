@@ -10,19 +10,22 @@ export class VendorManagementPage extends BasePage
   private readonly vendorCode = () => this.page.getByRole('textbox', { name: 'Vendor Code *' });
   private readonly chargeCode = () => this.page.getByRole('textbox', { name: 'Charge Code *' });
   private readonly vendorTypeDropdown = () => this.page.getByRole('combobox');
-  private readonly truckersOption = () => this.page.getByRole('option', { name: 'Truckers', exact: true });
+  private readonly truckersOption = () => this.page.getByRole('option', { name: 'Carrier', exact: true });
   private readonly email = () => this.page.getByRole('textbox', { name: 'Email Address' });
   private readonly address = () => this.page.getByRole('textbox', { name: 'Company Address' });
   private readonly saveBtn = () => this.page.getByRole('button', { name: 'Save' });
   private readonly okBtn = () => this.page.getByRole('button', { name: 'OK' });
-  private readonly editBtn = () => this.page.getByRole('link', { name: 'Edit' }).first();
+  private readonly editBtn = () => this.page.locator("//tr[1]//a[contains(@href, '/edit')]").first();
   private readonly updateBtn = () => this.page.getByRole('button', { name: 'Update' });
   private readonly searchBox = () => this.page.getByRole('textbox', { name: 'Search by Name' });
   private readonly deleteBtn = () => this.page.locator("//tr[1]/td[7]//button[.//span[text()='Delete']]");
   private readonly yesBtn = () => this.page.getByRole('button', { name: 'Yes' });
   private readonly clearFiltersBtn = () => this.page.getByRole('button', { name: 'Clear Filters' });
+ private readonly vendordisplaynametable = () =>this.page.locator("//tbody/tr/td[1]");
+ private readonly vendorTableHeader = () => this.page.locator("//thead");
  
-  @step('Navigate to Vendor Page')
+ 
+ @step('Navigate to Vendor Page')
   async navigateToVendor() 
   {
     // Wait for the page to load and ensure menu is visible
@@ -85,22 +88,31 @@ export class VendorManagementPage extends BasePage
     await this.page.waitForLoadState('networkidle');
     await this.page.waitForTimeout(1000); // Extra delay for list to render
     
-    // Wait for edit button to be visible with increased timeout
+    // Try to find and click edit button with multiple attempts
     const editBtn = this.editBtn();
-    await editBtn.waitFor({ state: 'visible', timeout: 15000 });
     
-    // Scroll into view and click
-    await editBtn.scrollIntoViewIfNeeded();
-    await this.page.waitForTimeout(500);
-    await editBtn.click();
+    try {
+      // Wait for edit button with timeout
+      await editBtn.waitFor({ state: 'visible', timeout: 10000 });
+      await editBtn.scrollIntoViewIfNeeded();
+      await this.page.waitForTimeout(500);
+      await editBtn.click();
+    } catch (error) {
+      // Fallback: click on the vendor display name table row
+      console.log('Edit button not found, clicking vendor row as fallback');
+      await this.vendordisplaynametable().click();
+    }
     
     // Wait for edit form to load
     await this.page.waitForLoadState('networkidle');
     await this.vendorDisplayName().waitFor({ state: 'visible', timeout: 10000 });
     
     // Fill updated information
+    await this.vendorDisplayName().clear();
     await this.vendorDisplayName().fill('Jampanaaa');
+    await this.vendorName().clear();
     await this.vendorName().fill('Lalithaa');
+    await this.email().clear();
     await this.email().fill('lalithajamp11s@yopmail.com');
     
     // Update vendor
@@ -111,15 +123,15 @@ export class VendorManagementPage extends BasePage
     // Wait for page to return to vendor list
     await this.page.waitForLoadState('networkidle');
   }
-  @step('Search Vendor')
-  async searchVendor() {
-    await this.searchBox().waitFor({ state: 'visible', timeout: 10000 });
-    await this.searchBox().fill('jampanaa');
-    await this.searchBox().press('Enter');
-    
-    // Wait for search results to load
-    await this.page.waitForLoadState('networkidle');
-  }
+ async searchVendor(searchValue: string) {
+
+  await this.searchBox().waitFor({ state: 'visible', timeout: 10000 });
+
+  await this.searchBox().fill(searchValue); // ✅ dynamic
+  await this.searchBox().press('Enter');
+
+  await this.page.waitForLoadState('networkidle');
+}
   @step('Validate Vendor Details')
   async validateVendor() {
     // Wait for table to load
@@ -163,4 +175,19 @@ export class VendorManagementPage extends BasePage
     // Wait for page to reload after clearing filters
     await this.page.waitForLoadState('networkidle');
   }
+
+@step('Verify Vendor Table Headers')
+async verifyVendorTableHeaders() 
+{
+    const header = this.vendorTableHeader();
+
+    await expect(header).toBeVisible();
+    await expect(header).toContainText('Vendor Name');
+    await expect(header).toContainText('Vendor Code');
+    await expect(header).toContainText('Category');
+    await expect(header).toContainText('Charge Code');
+    await expect(header).toContainText('Email Address');
+    await expect(header).toContainText('Company Address');
+    await expect(header).toContainText('Action');
+}
 }

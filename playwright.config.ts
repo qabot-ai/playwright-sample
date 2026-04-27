@@ -55,11 +55,11 @@ const config: PlaywrightTestConfig = {
         {
             name: 'mroads',
             testDir: './src/test/typescript',
-            testMatch: ['vendormanagement*.spec.ts'], // Include all tests
+            testMatch: ['addadmin*.spec.ts'], // Include all tests
             use: {
                 channel: 'chromium',
                 acceptDownloads: true,
-                headless: true,
+                headless: false,
                 viewport: null,
         
                 launchOptions: {

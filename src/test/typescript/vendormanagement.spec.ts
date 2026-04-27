@@ -33,40 +33,13 @@ test('Add New Vendor', async ({ vendormanagementPage, page, ENV }) =>
    console.log('✅ New vendor added successfully');
 });
 
-test('Search for Added Vendor', async ({ vendormanagementPage, page, ENV }) =>
-{
-  // Navigate directly to vendor management page
-  const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
-  await page.goto(vendorManagementUrl);
-  await page.waitForLoadState('networkidle');
-  
-  // Search for the vendor
-  await vendormanagementPage.searchVendor();
-  
-  // Assert that search results are displayed
-  await page.waitForLoadState('networkidle');
-  const tableBody = page.locator('tbody');
-  
-  // Assert that search results contain the vendor name
-  const vendorExists = await tableBody.locator('text=Jampanaaaaaaa').isVisible().catch(() => false);
-  
-  if (vendorExists) {
-    // If vendor exists, assert it's in the table
-    await expect(tableBody).toContainText('Jampanaaaaaaa');
-  } else {
-    // If vendor does not exist, assert true (vendor not found)
-    await expect(vendorExists).toBe(false);
-  }
-   console.log('✅ Search for Added Vendor successfully')
-});
-
 test('Edit Vendor Information', async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
   await page.goto(vendorManagementUrl);
   await page.waitForLoadState('networkidle');
-  
+  await vendormanagementPage.searchVendor("Jampanaaaaaaa");
   // Edit the vendor
   await vendormanagementPage.editVendor();
    console.log('✅ Edit Vendor Information successfully')
@@ -79,40 +52,13 @@ test('Validate Edited Vendor Details', async ({ vendormanagementPage, page, ENV 
   await page.waitForLoadState('networkidle');
   // Validate vendor details
   await vendormanagementPage.validateVendor();
-
   // Assert that all vendor details are present in the table
   const tableBody = page.locator('tbody');
-  await expect(tableBody).toContainText('Jampanaa');
+  await expect(tableBody).toContainText('Jampanaaa');
   await expect(tableBody).toContainText('LARRR');
   await expect(tableBody).toContainText('Truckers');
   await expect(tableBody).toContainText('lalithajamp11s@yopmail.com');
  console.log('✅ Validate Edited Vendor Details successfully')
-});
-test('Search for Edited Vendor', async ({ vendormanagementPage, page, ENV }) =>
-{
-  // Navigate directly to vendor management page
-  const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
-  await page.goto(vendorManagementUrl);
-  await page.waitForLoadState('networkidle');
-  
-  // Search for the vendor
-  await vendormanagementPage.searchVendor();
-  
-  // Assert that search results are displayed
-  await page.waitForLoadState('networkidle');
-  const tableBody = page.locator('tbody');
-  
-  // Assert that search results contain the vendor name
-  const vendorExists = await tableBody.locator('text=Jampanaa').isVisible().catch(() => false);
-  
-  if (vendorExists) {
-    // If vendor exists, assert it's in the table
-    await expect(tableBody).toContainText('Jampanaa');
-  } else {
-    // If vendor does not exist, assert true (vendor not found)
-    await expect(vendorExists).toBe(false);
-  }
-  console.log('✅ Search for Edited Vendor successfully');
 });
 test('Delete Vendor', async ({ vendormanagementPage, page, ENV }) =>
 {
@@ -120,13 +66,11 @@ test('Delete Vendor', async ({ vendormanagementPage, page, ENV }) =>
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
   await page.goto(vendorManagementUrl);
   await page.waitForLoadState('networkidle');
-  
+  await vendormanagementPage.searchVendor("Jampanaaa");
   // Delete the vendor
   await vendormanagementPage.deleteVendor(); 
    
 });
-
-
 test('Search for Deleted Vendor', async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
@@ -137,15 +81,12 @@ test('Search for Deleted Vendor', async ({ vendormanagementPage, page, ENV }) =>
   // Search for a non-existent vendor
   const searchBox = page.getByRole('textbox', { name: 'Search by Name' });
   await searchBox.waitFor({ state: 'visible', timeout: 10000 });
-  await searchBox.fill('Jampanaa');
-  await searchBox.press('Enter');
+  await vendormanagementPage.searchVendor("Jampanaaa");
   
   // Assert that search results are displayed
   await page.waitForLoadState('networkidle');
    console.log('✅ Search for Deleted Vendor successfull');
-  
 });
-
 
 test('Clear Filters', async ({ vendormanagementPage, page, ENV }) =>
 {
@@ -153,7 +94,7 @@ test('Clear Filters', async ({ vendormanagementPage, page, ENV }) =>
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
   await page.goto(vendorManagementUrl);
   await page.waitForLoadState('networkidle');
-  
+  await vendormanagementPage.searchVendor("Jampanaaa");
   // Clear filters
   await vendormanagementPage.clearFilters();
   
@@ -162,4 +103,16 @@ test('Clear Filters', async ({ vendormanagementPage, page, ENV }) =>
   const tableBody = page.locator('tbody');
   await expect(tableBody).toBeVisible();
    console.log('✅ Clear Filters successfully');
+});
+test('Verify Vendor Table Headers', async ({ vendormanagementPage, page, ENV }) =>
+{
+  // Navigate directly to vendor management page
+  const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
+  await page.goto(vendorManagementUrl);
+  await page.waitForLoadState('networkidle');
+  // Verify table headers
+  await vendormanagementPage.verifyVendorTableHeaders();
+  // Assert that headers are visible and contain expected text
+  await page.waitForLoadState('networkidle');
+   console.log('✅ Verify Vendor Table Headers successfully');
 });
