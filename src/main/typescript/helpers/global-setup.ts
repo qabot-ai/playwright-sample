@@ -24,14 +24,14 @@ async function globalSetup(_config: FullConfig) {
     // Perform authentication and save storage state
     console.log('👉 Starting authentication for session storage...')
     
-    const browser = await chromium.launch({ headless: true })
+    const browser = await chromium.launch({ headless: false })
     const context = await browser.newContext()
     const page = await context.newPage()
 
     try {
         const baseUrl = process.env.BASE_URL || 'https://dev-freight.wendai.ai/login'
         const username = process.env.SuperAdminEmail || process.env.USERNAME || 'superadmin@yopmail.com'
-        const password = process.env.SuperAdminPassword || process.env.PASSWORD || 'Test@1234'
+        const password = process.env.SuperAdminPassword || process.env.PASSWORD || 'Test@123456'
 
         console.log('👉 Opening application at:', baseUrl)
         await page.goto(baseUrl, { waitUntil: 'networkidle' })

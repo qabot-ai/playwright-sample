@@ -15,7 +15,7 @@ export class VendorManagementPage extends BasePage
   private readonly address = () => this.page.getByRole('textbox', { name: 'Company Address' });
   private readonly saveBtn = () => this.page.getByRole('button', { name: 'Save' });
   private readonly okBtn = () => this.page.getByRole('button', { name: 'OK' });
-  private readonly editBtn = () => this.page.locator("//tr[1]//a[contains(@href, '/edit')]").first();
+  private readonly editBtn = () =>this.page.locator("xpath=//*[name()='svg' and contains(@class,'lucide-square-pen')]/following::*[1]/parent::a");
   private readonly updateBtn = () => this.page.getByRole('button', { name: 'Update' });
   private readonly searchBox = () => this.page.getByRole('textbox', { name: 'Search by Name' });
   private readonly deleteBtn = () => this.page.locator("//tr[1]/td[7]//button[.//span[text()='Delete']]");
@@ -85,34 +85,26 @@ export class VendorManagementPage extends BasePage
   async editVendor() 
   {
     // Wait for the vendor list to fully load
-    await this.page.waitForLoadState('networkidle');
+    //await this.page.waitForLoadState('networkidle');
     await this.page.waitForTimeout(1000); // Extra delay for list to render
     
-    // Try to find and click edit button with multiple attempts
-    const editBtn = this.editBtn();
+    // Wait for edit button to be visible with increased timeout
+    //const editBtn = this.editBtn();
+   // await editBtn.waitFor({ state: 'visible', timeout: 15000 });
     
-    try {
-      // Wait for edit button with timeout
-      await editBtn.waitFor({ state: 'visible', timeout: 10000 });
-      await editBtn.scrollIntoViewIfNeeded();
-      await this.page.waitForTimeout(500);
-      await editBtn.click();
-    } catch (error) {
-      // Fallback: click on the vendor display name table row
-      console.log('Edit button not found, clicking vendor row as fallback');
-      await this.vendordisplaynametable().click();
-    }
+    // Scroll into view and click
+   // await editBtn.scrollIntoViewIfNeeded();
+    //await this.page.waitForTimeout(500);
+    //await editBtn.click();
+    await this.vendordisplaynametable().click();
     
     // Wait for edit form to load
     await this.page.waitForLoadState('networkidle');
     await this.vendorDisplayName().waitFor({ state: 'visible', timeout: 10000 });
     
     // Fill updated information
-    await this.vendorDisplayName().clear();
     await this.vendorDisplayName().fill('Jampanaaa');
-    await this.vendorName().clear();
     await this.vendorName().fill('Lalithaa');
-    await this.email().clear();
     await this.email().fill('lalithajamp11s@yopmail.com');
     
     // Update vendor

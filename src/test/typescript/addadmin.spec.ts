@@ -14,17 +14,5 @@ test('Navigate to Admin Page', async ({ addadminPage, page, ENV }) =>
   console.log('✅ Navigated to Admin page successfully');
 });
 
-test('Add New Admin User', async ({ addadminPage, page, ENV }) =>
-{
-  // Navigate directly to admin page
-  const adminUrl = ENV.BASE_URL.replace('/login', '/add-admin');
-  await page.goto(adminUrl);
-  await page.waitForLoadState('networkidle');
-  
-  // Add a new admin with custom parameters
-  await addadminPage.addAdmin();
- // Assert that success message appears
-  /*const successMessage = page.getByRole('paragraph').filter({ hasText: 'successfully' });
-  await expect(successMessage).toBeVisible();*/
-  console.log('✅ New admin user added successfully');
-});
+
+

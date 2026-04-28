@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/LoginPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import { VendorManagementPage } from '../pages/VendorManagementPage'
 import { AddAdminPage } from '../pages/AddAdminPage'
+import { YopmailandchangepwdPage, YopmailPage } from '../pages/YopmailandchangepwdPage'
 import ENV from '../../resources/env/env'
 
 /**
@@ -18,6 +19,7 @@ type MyFixtures = {
     dashboardPage: DashboardPage
     vendormanagementPage: VendorManagementPage
     addadminPage: AddAdminPage
+    yopmailandchangepwdPage: YopmailPage
     ENV: typeof ENV
 }
 
@@ -43,7 +45,10 @@ export const test = base.extend<MyFixtures>({
         {
         return await use(new AddAdminPage(page))
      },
-
+    yopmailandchangepwdPage: async ({ page }, use) => 
+        {
+        return await use(new YopmailandchangepwdPage(page))
+     },
     ENV: async ({}, use) => {
         return await use(ENV)
     }

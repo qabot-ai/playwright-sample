@@ -4,6 +4,8 @@ import { step } from '../helpers/Decorators'
 
 export class AddAdminPage extends BasePage 
 {
+  public generatedEmail: string = '';
+  
   private readonly adminMenu = () => this.page.getByRole('link', { name: 'Admin' });
   private readonly addAdminBtn = () => this.page.getByRole('button', { name: 'Add Admin' });
   private readonly fullName = () => this.page.getByRole('textbox', { name: 'Full Name *' });
@@ -45,7 +47,10 @@ export class AddAdminPage extends BasePage
   const phone = '984'+random7Digits;
   const email = "lalliadmin"+random5Digits+"@yopmail.com";
   const username = 'lalithaadmin'+random5Digits;
-    await this.page.waitForLoadState('networkidle');
+  
+  // Store email for external access
+  this.generatedEmail = email;
+   // await this.page.waitForLoadState('networkidle');
     
     // Fill form fields
     await this.fullName().waitFor({ state: 'visible', timeout: 10000 });
