@@ -1,6 +1,6 @@
 import { test, expect } from '../../main/typescript/base/customFixtures';
 
-test('Dashboard Header Visibility', async ({ dashboardPage, page, ENV }) =>
+test('Dashboard Header Visibility',{tag:["@Smoke", "Regression", "@Urgent"]},async ({ dashboardPage, page, ENV }) =>
 { 
   await page.goto(ENV.BASE_URL.replace('/login', ''));
   await dashboardPage.dashboardHeaderVisibilty();
@@ -22,7 +22,7 @@ test('Navigate to Vendor Management Page', async ({ vendormanagementPage, page, 
    console.log('✅ navigated to Vendor Management page successfully');
 });
 
-test('Add New Vendor', async ({ vendormanagementPage, page, ENV }) =>
+test('Add New Vendor', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -33,7 +33,7 @@ test('Add New Vendor', async ({ vendormanagementPage, page, ENV }) =>
    console.log('✅ New vendor added successfully');
 });
 
-test('Edit Vendor Information', async ({ vendormanagementPage, page, ENV }) =>
+test('Edit Vendor Information', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -44,7 +44,7 @@ test('Edit Vendor Information', async ({ vendormanagementPage, page, ENV }) =>
   await vendormanagementPage.editVendor();
    console.log('✅ Edit Vendor Information successfully')
 });
-test('Validate Edited Vendor Details', async ({ vendormanagementPage, page, ENV }) =>
+test('Validate Edited Vendor Details',{tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -60,7 +60,7 @@ test('Validate Edited Vendor Details', async ({ vendormanagementPage, page, ENV 
   await expect(tableBody).toContainText('lalithajamp11s@yopmail.com');
  console.log('✅ Validate Edited Vendor Details successfully')
 });
-test('Delete Vendor', async ({ vendormanagementPage, page, ENV }) =>
+test('Delete Vendor', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -71,7 +71,7 @@ test('Delete Vendor', async ({ vendormanagementPage, page, ENV }) =>
   await vendormanagementPage.deleteVendor(); 
    
 });
-test('Search for Deleted Vendor', async ({ vendormanagementPage, page, ENV }) =>
+test('Search for Deleted Vendor', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -88,7 +88,7 @@ test('Search for Deleted Vendor', async ({ vendormanagementPage, page, ENV }) =>
    console.log('✅ Search for Deleted Vendor successfull');
 });
 
-test('Clear Filters', async ({ vendormanagementPage, page, ENV }) =>
+test('Clear Filters', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');
@@ -104,7 +104,7 @@ test('Clear Filters', async ({ vendormanagementPage, page, ENV }) =>
   await expect(tableBody).toBeVisible();
    console.log('✅ Clear Filters successfully');
 });
-test('Verify Vendor Table Headers', async ({ vendormanagementPage, page, ENV }) =>
+test('Verify Vendor Table Headers', {tag:["@Smoke", "Regression", "@Urgent"]}, async ({ vendormanagementPage, page, ENV }) =>
 {
   // Navigate directly to vendor management page
   const vendorManagementUrl = ENV.BASE_URL.replace('/login', '/vendor-management');

@@ -41,11 +41,12 @@ export class AddAdminPage extends BasePage
   { // Generate random values
   const random5Digits = Math.floor(10000 + Math.random() * 90000); // 5 digits
   const random7Digits = Math.floor(1000000 + Math.random() * 9000000); // 7 digits
-
+  const randomText = Math.random().toString(36).replace(/[^a-z]/g, '').substring(0, 6);
+  console.log(randomText); // example: abcxyz
   // Unique test data
   const fullName = 'Lalitha'+random5Digits;
   const phone = '984'+random7Digits;
-  const email = "lalliadmin"+random5Digits+"@yopmail.com";
+  const email = randomText+random5Digits+"@yopmail.com";
   const username = 'lalithaadmin'+random5Digits;
   
   // Store email for external access

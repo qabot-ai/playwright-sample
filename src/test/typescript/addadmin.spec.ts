@@ -1,7 +1,7 @@
 import { test, expect } from '../../main/typescript/base/customFixtures';
 
 
-test('Navigate to Admin Page', async ({ addadminPage, page, ENV }) =>
+test('Navigate to Admin Page',{tag:["@Smoke", "Regression", "@Urgent"]}, async ({ addadminPage, page, ENV }) =>
 {
   // Navigate directly to admin page with stored session
   const adminUrl = ENV.BASE_URL.replace('/login', '/add-admin');

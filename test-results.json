@@ -27,6 +27,7 @@
         "testDir": "C:/Users/mroads/playwright-sample/src/test/typescript",
         "testIgnore": [],
         "testMatch": [
+          "vendormanagement.spec.ts",
           "addadmin.spec.ts",
           "yopmailandchangepwd.spec.ts"
         ],
@@ -94,7 +95,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3252,
+                  "duration": 3638,
                   "errors": [],
                   "stdout": [
                     {
@@ -103,7 +104,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-28T09:49:27.875Z",
+                  "startTime": "2026-04-30T10:49:48.669Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -135,6 +136,556 @@
       ]
     },
     {
+      "title": "src\\test\\typescript\\vendormanagement.spec.ts",
+      "file": "src/test/typescript/vendormanagement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Dashboard Header Visibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3359,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "04-30-2026 16:19:55: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-30-2026 16:19:55: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "04-30-2026 16:19:55: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "✅ Dashboard header is visible\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
+                      "duration": 1750,
+                      "steps": [
+                        {
+                          "title": "Utility.checkIfElementExists - Check If Element Exists",
+                          "duration": 105
+                        }
+                      ]
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:49:52.653Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Dashboard-Header-Visibility-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-5158b9c1db404b6be3d3",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Navigate to Vendor Management Page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2834,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ navigated to Vendor Management page successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-30T10:49:56.134Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Navigate-to-Vendor-Management-Page-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-0110d354e8cdc45f324b",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "Add New Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5437,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ New vendor added successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.addVendor - Add Vendor",
+                      "duration": 2494
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:49:59.071Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Add-New-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-cc59c63233d8bee8127e",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "Edit Vendor Information",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6054,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Edit Vendor Information successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.editVendor - Edit Vendor",
+                      "duration": 3133
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:50:04.654Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-8875761c50e6c104e373",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "Validate Edited Vendor Details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2766,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Validate Edited Vendor Details successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
+                      "duration": 105
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:50:10.844Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-c1357fe178cfb55d3a43",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "Delete Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.deleteVendor - Delete Vendor",
+                      "duration": 1920
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:50:13.704Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-1da0573ed56ed72e7545",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 63,
+          "column": 5
+        },
+        {
+          "title": "Search for Deleted Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2713,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Delete Vendor successfully\n"
+                    },
+                    {
+                      "text": "✅ Search for Deleted Vendor successfull\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-30T10:50:18.562Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-2909811415ddbce25a68",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "Clear Filters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3758,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Clear Filters successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.clearFilters - Clear Filters",
+                      "duration": 987
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:50:21.369Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-451c04c4f235e7351ae2",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "Verify Vendor Table Headers",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2598,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Verify Vendor Table Headers successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.verifyVendorTableHeaders - Verify Vendor Table Headers",
+                      "duration": 103
+                    }
+                  ],
+                  "startTime": "2026-04-30T10:50:25.226Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-bdea3fdbabe65b2f034c",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 107,
+          "column": 5
+        }
+      ]
+    },
+    {
       "title": "src\\test\\typescript\\yopmailandchangepwd.spec.ts",
       "file": "src/test/typescript/yopmailandchangepwd.spec.ts",
       "column": 0,
@@ -156,10 +707,10 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 28893,
+                  "duration": 34426,
                   "error": {
                     "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5",
                     "location": {
                       "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts",
                       "column": 34,
@@ -174,7 +725,7 @@
                         "column": 34,
                         "line": 65
                       },
-                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65\n\n\u001b[0m \u001b[90m 63 |\u001b[39m {\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mupdatePassword(newTab\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5\u001b[22m"
+                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65\n\n\u001b[0m \u001b[90m 63 |\u001b[39m {\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mupdatePassword(newTab\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5\u001b[22m"
                     },
                     {
                       "location": {
@@ -182,12 +733,12 @@
                         "column": 47,
                         "line": 64
                       },
-                      "message": "Error: browserContext.waitForEvent: Test ended.\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64\n\n\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36masync\u001b[39m confirmSignup(password\u001b[33m:\u001b[39m string)\n \u001b[90m 63 |\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64:47)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5\u001b[22m"
+                      "message": "Error: browserContext.waitForEvent: Test ended.\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64\n\n\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36masync\u001b[39m confirmSignup(password\u001b[33m:\u001b[39m string)\n \u001b[90m 63 |\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64:47)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5\u001b[22m"
                     }
                   ],
                   "stdout": [
                     {
-                      "text": "Using generated email:lalliadmin91603@yopmail.com\n"
+                      "text": "Using generated email:lalliadmin99467@yopmail.com\n"
                     }
                   ],
                   "stderr": [],
@@ -195,22 +746,22 @@
                   "steps": [
                     {
                       "title": "AddAdminPage.addAdmin - Add Admin User",
-                      "duration": 7111
+                      "duration": 7568
                     },
                     {
                       "title": "YopmailandchangepwdPage.openYopmailInbox - Open Yopmail Inbox",
-                      "duration": 2593
+                      "duration": 2500
                     },
                     {
                       "title": "YopmailandchangepwdPage.openSignupMail - Open Signup Mail",
-                      "duration": 129
+                      "duration": 103
                     },
                     {
                       "title": "YopmailandchangepwdPage.confirmSignup - Confirm Signup and Set Password",
-                      "duration": 15032,
+                      "duration": 15018,
                       "error": {
                         "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5",
                         "location": {
                           "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts",
                           "column": 34,
@@ -220,7 +771,7 @@
                       }
                     }
                   ],
-                  "startTime": "2026-04-28T09:49:31.481Z",
+                  "startTime": "2026-04-30T10:50:27.933Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -254,10 +805,10 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 30063,
+                  "duration": 34780,
                   "error": {
                     "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5",
                     "location": {
                       "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts",
                       "column": 34,
@@ -272,7 +823,7 @@
                         "column": 34,
                         "line": 65
                       },
-                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65\n\n\u001b[0m \u001b[90m 63 |\u001b[39m {\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mupdatePassword(newTab\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5\u001b[22m"
+                      "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65\n\n\u001b[0m \u001b[90m 63 |\u001b[39m {\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mupdatePassword(newTab\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5\u001b[22m"
                     },
                     {
                       "location": {
@@ -280,12 +831,12 @@
                         "column": 47,
                         "line": 64
                       },
-                      "message": "Error: browserContext.waitForEvent: Test ended.\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64\n\n\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36masync\u001b[39m confirmSignup(password\u001b[33m:\u001b[39m string)\n \u001b[90m 63 |\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64:47)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5\u001b[22m"
+                      "message": "Error: browserContext.waitForEvent: Test ended.\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64\n\n\u001b[0m \u001b[90m 62 |\u001b[39m \u001b[36masync\u001b[39m confirmSignup(password\u001b[33m:\u001b[39m string)\n \u001b[90m 63 |\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m newTabPromise \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mcontext()\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'page'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfirmMailLink()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m     \u001b[36mconst\u001b[39m newTab \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newTabPromise\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:64:47)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5\u001b[22m"
                     }
                   ],
                   "stdout": [
                     {
-                      "text": "Using generated email:lalliadmin25164@yopmail.com\n"
+                      "text": "Using generated email:lalliadmin85125@yopmail.com\n"
                     }
                   ],
                   "stderr": [],
@@ -293,22 +844,22 @@
                   "steps": [
                     {
                       "title": "AddAdminPage.addAdmin - Add Admin User",
-                      "duration": 7687
+                      "duration": 7248
                     },
                     {
                       "title": "YopmailandchangepwdPage.openYopmailInbox - Open Yopmail Inbox",
-                      "duration": 2917
+                      "duration": 3233
                     },
                     {
                       "title": "YopmailandchangepwdPage.openSignupMail - Open Signup Mail",
-                      "duration": 121
+                      "duration": 158
                     },
                     {
                       "title": "YopmailandchangepwdPage.confirmSignup - Confirm Signup and Set Password",
-                      "duration": 15033,
+                      "duration": 15022,
                       "error": {
                         "message": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:11:5",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\\'ifmail\\']').contentFrame().getByRole('link', { name: 'Confirm your mail' }) to be visible\u001b[22m\n\n    at YopmailandchangepwdPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts:65:34)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\yopmailandchangepwd.spec.ts:12:5",
                         "location": {
                           "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\YopmailandchangepwdPage.ts",
                           "column": 34,
@@ -318,7 +869,7 @@
                       }
                     }
                   ],
-                  "startTime": "2026-04-28T09:50:01.725Z",
+                  "startTime": "2026-04-30T10:51:03.711Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -373,7 +924,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4019,
+                  "duration": 4616,
                   "errors": [],
                   "stdout": [
                     {
@@ -385,10 +936,10 @@
                   "steps": [
                     {
                       "title": "YopmailandchangepwdPage.updatePassword - Update Password on New Tab",
-                      "duration": 509
+                      "duration": 572
                     }
                   ],
-                  "startTime": "2026-04-28T09:50:33.353Z",
+                  "startTime": "2026-04-30T10:51:40.050Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -414,7 +965,7 @@
           ],
           "id": "088c29449ff70c7c3f60-6afc66bd17aaa172d40b",
           "file": "src/test/typescript/yopmailandchangepwd.spec.ts",
-          "line": 15,
+          "line": 16,
           "column": 9
         }
       ]
@@ -422,9 +973,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-28T09:49:22.882Z",
-    "duration": 75316.955,
-    "expected": 2,
+    "startTime": "2026-04-30T10:49:42.942Z",
+    "duration": 122676.728,
+    "expected": 11,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0
