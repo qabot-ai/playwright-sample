@@ -13,3 +13,6 @@ blob-report/
 log/
 browserstackSetupConfig.json
 playwright-browserstack-sdk.config.temp.json
+.playwright-mcp
+*.png
+*.json
