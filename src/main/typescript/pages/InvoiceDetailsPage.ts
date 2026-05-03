@@ -6,7 +6,7 @@ export class InvoiceDetailsPage extends BasePage {
     private readonly invoiceDetailsHeading = "//h3[text()='Invoice Details']"
 
     // Arrow-function locators
-    private readonly viewFirstInvoiceBtn = () => this.page.locator("(//a[contains(@href,'/document-preview/')] | //button[.//span[text()='View']])[1]")
+    private readonly viewFirstInvoiceBtn = () => this.page.locator("//a[contains(@href,'/document-preview/')]").first()
     private readonly exportToExcelBtn = () => this.page.getByRole('button', { name: 'Export to Excel' })
 
     @step('Navigate to Invoices Page')
