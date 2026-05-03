@@ -9,7 +9,7 @@ import { test, expect } from '../../main/typescript/base/customFixtures';
     await page.waitForTimeout(5000);
     await yopmailandchangepwdPage.openYopmailInbox(addadminPage.generatedEmail);
     await yopmailandchangepwdPage.openSignupMail();
-    await yopmailandchangepwdPage.confirmSignup('Test@123456');
+    await yopmailandchangepwdPage.confirmSignup('Test@12346');
     console.log('✅ yopmail confirmation link clicked and password updated');
     });
 
@@ -18,6 +18,6 @@ import { test, expect } from '../../main/typescript/base/customFixtures';
          const Url = ENV.BASE_URL.replace('/login', '/update-password?force=true');
   await page.goto(Url);
   await page.waitForLoadState('networkidle');
-  await yopmailandchangepwdPage.updatePassword(page, 'Test@123456');
+  await yopmailandchangepwdPage.updatePassword(page, 'Test@12345');
    console.log('✅ Password updated successfully and navigated to dashboard');
     });

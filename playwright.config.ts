@@ -60,7 +60,7 @@ const config: PlaywrightTestConfig = {
             use: {
                 channel: 'chromium',
                 acceptDownloads: true,
-                headless: true,
+                headless: false,
                 viewport: null,
         
                 launchOptions: {

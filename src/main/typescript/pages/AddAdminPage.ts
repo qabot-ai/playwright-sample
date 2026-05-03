@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { BasePage } from '../base/BasePage'
-import { step } from '../helpers/Decorators'
+import { log, step } from '../helpers/Decorators'
 
 export class AddAdminPage extends BasePage 
 {
@@ -51,6 +51,7 @@ export class AddAdminPage extends BasePage
   
   // Store email for external access
   this.generatedEmail = email;
+  console.log('Generated Email: ' + this.generatedEmail);
    // await this.page.waitForLoadState('networkidle');
     
     // Fill form fields
