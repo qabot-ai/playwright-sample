@@ -32,6 +32,11 @@ export class InvoiceSearchPage extends BasePage {
         const searchInputs = await this.page.locator("input[type='text'], input[placeholder*='Search'], input[placeholder*='search']").all()
         if (searchInputs.length > 0) {
             await searchInputs[0].fill(invoiceNum)
+            await this.page.waitForTimeout(500)
+            // Send keydown event
+            await searchInputs[0].dispatchEvent('keydown', { key: 'Enter', code: 'Enter' })
+            // Press Enter key
+            await searchInputs[0].press('Enter')
             await this.page.waitForTimeout(1500)
         } else {
             console.log('⚠️ Search input not found, skipping search')
