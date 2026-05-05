@@ -8,6 +8,7 @@ import { VendorManagementPage } from '../pages/VendorManagementPage'
 import { AddAdminPage } from '../pages/AddAdminPage'
 import { YopmailandchangepwdPage, YopmailPage } from '../pages/YopmailandchangepwdPage'
 import { InvoiceDetailsPage } from '../pages/InvoiceDetailsPage'
+import { InvoiceSearchPage } from '../pages/InvoiceSearchPage'
 import ENV from '../../resources/env/env'
 
 /**
@@ -22,6 +23,7 @@ type MyFixtures = {
     addadminPage: AddAdminPage
     yopmailandchangepwdPage: YopmailPage
     invoiceDetailsPage: InvoiceDetailsPage
+    invoiceSearchPage: InvoiceSearchPage
     ENV: typeof ENV
 }
 
@@ -53,6 +55,9 @@ export const test = base.extend<MyFixtures>({
      },
     invoiceDetailsPage: async ({ page }, use) => {
         return await use(new InvoiceDetailsPage(page))
+    },
+    invoiceSearchPage: async ({ page }, use) => {
+        return await use(new InvoiceSearchPage(page))
     },
     ENV: async ({}, use) => {
         return await use(ENV)
