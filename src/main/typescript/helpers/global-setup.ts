@@ -31,22 +31,33 @@ async function globalSetup(_config: FullConfig) {
     try {
         const baseUrl = process.env.BASE_URL || 'https://dev-freight.wendai.ai/login'
         const username = process.env.SuperAdminEmail || process.env.USERNAME || 'superadmin@yopmail.com'
-        const password = process.env.SuperAdminPassword || process.env.PASSWORD || 'Test@123456'
+        const password = process.env.SuperAdminPassword || process.env.PASSWORD || 'Test@12345'
 
         console.log('👉 Opening application at:', baseUrl)
         await page.goto(baseUrl, { waitUntil: 'networkidle' })
 
-        console.log('👉 Entering credentials')
-        await page.fill('#email', username)
-        await page.fill('#password', password)
+        console.log('👉 Entering credentials:', username)
+        await page.locator("input[type='email']").fill(username)
+        await page.locator("input[type='password']").fill(password)
 
         console.log('👉 Clicking LOGIN button')
-        await page.click("//button[text()='LOGIN']")
+        await page.locator("button:has-text('LOGIN')").click()
 
-        console.log('👉 Waiting for dashboard to load')
-        await page.waitForSelector("//h1[text()='Dashboard']", {
-            timeout: 20000
-        })
+        console.log('👉 Waiting for dashboard/invoices page load after login')
+        // Wait for either Dashboard redirect or stay on page without login form
+        try {
+            await Promise.race([
+                page.waitForURL('**/dashboard', { timeout: 10000 }),
+                page.waitForURL('**/invoices', { timeout: 10000 }),
+                page.locator("//h1[text()='Dashboard']").waitFor({ timeout: 10000 }),
+            ])
+        } catch {
+            // Check if we successfully logged in by checking if the email field is gone
+            const emailFieldExists = await page.locator("input[type='email']").count() > 0
+            if (emailFieldExists) {
+                throw new Error('Login failed - still on login page')
+            }
+        }
 
         console.log('👉 Saving storage state')
         await context.storageState({ path: 'storageState.json' })
