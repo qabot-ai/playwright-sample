@@ -27,7 +27,7 @@
         "testDir": "C:/Users/mroads/playwright-sample/src/test/typescript",
         "testIgnore": [],
         "testMatch": [
-          "scrum8.spec.ts"
+          "usermanagement.spec.ts"
         ],
         "timeout": 120000
       }
@@ -72,18 +72,15 @@
   },
   "suites": [
     {
-      "title": "src\\test\\typescript\\scrum8.spec.ts",
-      "file": "src/test/typescript/scrum8.spec.ts",
+      "title": "src\\test\\typescript\\usermanagement.spec.ts",
+      "file": "src/test/typescript/usermanagement.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "SCRUM-8: Test Case: Verify Search by Invoice Num",
+          "title": "Verify inactive users matches pagination count of active users in user management",
           "ok": true,
-          "tags": [
-            "Smoke",
-            "Regression"
-          ],
+          "tags": [],
           "tests": [
             {
               "timeout": 120000,
@@ -96,50 +93,41 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6271,
+                  "duration": 11579,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Invoice BT-25-0060 is successfully found and visible in the table\n"
+                      "text": "Inactive Users Count: 2, Pagination Total: 2\n"
+                    },
+                    {
+                      "text": "✅ Inactive users count matches pagination count\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
-                      "title": "InvoiceSearchPage.navigateToInvoices - Navigate to Invoices Page",
-                      "duration": 2511
-                    },
-                    {
-                      "title": "InvoiceSearchPage.waitForInvoicesTableToLoad - Wait for Invoices Page Content to Load",
-                      "duration": 1066
-                    },
-                    {
-                      "title": "InvoiceSearchPage.searchByInvoiceNumber - Search Invoice by Number: {invoiceNum}",
-                      "duration": 1627
-                    },
-                    {
-                      "title": "InvoiceSearchPage.verifyInvoiceVisibleInTable - Verify Invoice {invoiceNum} is Visible in Table",
-                      "duration": 22
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 29
                     }
                   ],
-                  "startTime": "2026-05-05T05:18:51.879Z",
+                  "startTime": "2026-05-06T11:59:18.397Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\test-finished-1.png"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -147,9 +135,9 @@
               "status": "expected"
             }
           ],
-          "id": "9444fe06ba9c2e4d3eee-acdda87308f6282d0068",
-          "file": "src/test/typescript/scrum8.spec.ts",
-          "line": 3,
+          "id": "42ee30bb98636c2acf94-5f1286497ea92d5554b7",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 61,
           "column": 5
         }
       ]
@@ -157,8 +145,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-05T05:18:46.870Z",
-    "duration": 12132.122,
+    "startTime": "2026-05-06T11:59:13.684Z",
+    "duration": 16854.892,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
