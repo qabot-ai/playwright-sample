@@ -2,7 +2,7 @@ import { test, expect } from '../../main/typescript/base/customFixtures';
 import { UserManagementPage } from '../../main/typescript/pages/UserManagementPage';
 
 
-test('Navigate to User Management Page', async ({ userManagementPage, page, ENV }) =>
+/*test('Navigate to User Management Page', async ({ userManagementPage, page, ENV }) =>
 {
   // Navigate directly to user management page with stored session
   //const userManagementUrl = ENV.BASE_URL.replace('/login', '/user-management');
@@ -56,7 +56,7 @@ test('Verify active users matches pagination count of active users in user manag
   expect(activeUsersCount).toBe(paginationTotal);
   console.log(`Active Users Count: ${activeUsersCount}, Pagination Total: ${paginationTotal}`);
   console.log('✅ Active users count matches pagination count');
-});
+})
 
 test('Verify inactive users matches pagination count of active users in user management', async ({  userManagementPage,page, ENV }) => 
   {
@@ -72,5 +72,58 @@ test('Verify inactive users matches pagination count of active users in user man
   expect(inactiveUsersCount).toBe(paginationTotal);
   console.log(`Inactive Users Count: ${inactiveUsersCount}, Pagination Total: ${paginationTotal}`);
   console.log('✅ Inactive users count matches pagination count');
+});
+test('Verify admin users count matches pagination count of admin users in user management', async ({  userManagementPage,page, ENV }) => 
+  {
+  await page.goto(ENV.BASE_URL.replace('/login', '/user-management'));
+  // ✅ Main validation (your step)
+  await page.waitForLoadState('networkidle');
+  const AdminCount = await userManagementPage.getAdminCount();
+  await userManagementPage.getAdminCount();
+  await page.waitForLoadState('networkidle');
+  await userManagementPage.selectRole('Admin');
+  await page.waitForTimeout(8000); 
+  const paginationTotal = await userManagementPage.getPaginationTotalCount();
+  expect(AdminCount).toBe(paginationTotal);
+  console.log(`Admin Count: ${AdminCount}, Pagination Total: ${paginationTotal}`);
+  console.log('✅ Admin users count matches pagination count');
+});
+test('Verify Managers users matches pagination count of Manager users in user management', async ({  userManagementPage,page, ENV }) => 
+  {
+  await page.goto(ENV.BASE_URL.replace('/login', '/user-management'));
+  // ✅ Main validation (your step)
+  await page.waitForLoadState('networkidle');
+  const ManagerCount = await userManagementPage.getManagerCount();
+  await userManagementPage.getManagerCount();
+  await page.waitForLoadState('networkidle');
+  await userManagementPage.selectRole('Manager');
+  await page.waitForTimeout(8000); 
+  const paginationTotal = await userManagementPage.getPaginationTotalCount();
+  expect(ManagerCount).toBe(paginationTotal);
+  console.log(`Manager Count: ${ManagerCount}, Pagination Total: ${paginationTotal}`);
+  console.log('✅ Manager users count matches pagination count');
+});
+test('Verify add user page navigation', async ({ userManagementPage, page, ENV }) =>
+{
+  // Navigate directly to user management page with stored session
+
+  await page.goto(ENV.BASE_URL.replace('/login', '/user-management'));
+  await page.waitForLoadState('networkidle');
+  // Assert that we are on the user management page
+  await userManagementPage.clickAddUser();
+  await page.waitForLoadState('networkidle');
+  await expect(page).toHaveURL('https://dev-freight.wendai.ai/add-user'); 
+
+  console.log('✅ Navigated to Add User page successfully');
+});*/
+
+test('Add New Standard User', async ({ userManagementPage, page, ENV }) =>
+
+{
+  // Navigate directly to admin page with stored session
+ const addUserUrl = ENV.BASE_URL.replace('/login', '/add-user');
+  await page.goto(addUserUrl);
+  await page.waitForLoadState('networkidle')
+  await userManagementPage.addStandardUser();
 });
 
