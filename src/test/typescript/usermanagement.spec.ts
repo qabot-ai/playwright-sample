@@ -2,7 +2,7 @@ import { test, expect } from '../../main/typescript/base/customFixtures';
 import { UserManagementPage } from '../../main/typescript/pages/UserManagementPage';
 
 
-/*test('Navigate to User Management Page', async ({ userManagementPage, page, ENV }) =>
+test('Navigate to User Management Page', async ({ userManagementPage, page, ENV }) =>
 {
   // Navigate directly to user management page with stored session
   //const userManagementUrl = ENV.BASE_URL.replace('/login', '/user-management');
@@ -115,7 +115,7 @@ test('Verify add user page navigation', async ({ userManagementPage, page, ENV }
   await expect(page).toHaveURL('https://dev-freight.wendai.ai/add-user'); 
 
   console.log('✅ Navigated to Add User page successfully');
-});*/
+});
 
 test('Add New Standard User', async ({ userManagementPage, page, ENV }) =>
 
@@ -125,5 +125,7 @@ test('Add New Standard User', async ({ userManagementPage, page, ENV }) =>
   await page.goto(addUserUrl);
   await page.waitForLoadState('networkidle')
   await userManagementPage.addStandardUser();
+  await page.waitForLoadState('networkidle');
+  await userManagementPage.validateStandardUserAdded();
 });
 
