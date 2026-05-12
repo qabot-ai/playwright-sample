@@ -81,7 +81,7 @@ export class AddAdminPage extends BasePage
     await this.okBtn().click();
     
     // Wait for success and return to list
-    await this.page.waitForLoadState('networkidle');
+   // await this.page.waitForLoadState('networkidle');
   }
 
   @step('Validate Admin Added Successfully')

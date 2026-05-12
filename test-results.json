@@ -27,7 +27,9 @@
         "testDir": "C:/Users/mroads/playwright-sample/src/test/typescript",
         "testIgnore": [],
         "testMatch": [
-          "scrum8.spec.ts"
+          "vendormanagement.spec.ts",
+          "addadmin.spec.ts",
+          "usermanagement.spec.ts"
         ],
         "timeout": 120000
       }
@@ -72,18 +74,15 @@
   },
   "suites": [
     {
-      "title": "src\\test\\typescript\\scrum8.spec.ts",
-      "file": "src/test/typescript/scrum8.spec.ts",
+      "title": "src\\test\\typescript\\addadmin.spec.ts",
+      "file": "src/test/typescript/addadmin.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "SCRUM-8: Test Case: Verify Search by Invoice Num",
+          "title": "Navigate to Admin Page",
           "ok": true,
-          "tags": [
-            "Smoke",
-            "Regression"
-          ],
+          "tags": [],
           "tests": [
             {
               "timeout": 120000,
@@ -96,50 +95,32 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6271,
+                  "duration": 4215,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Invoice BT-25-0060 is successfully found and visible in the table\n"
+                      "text": "✅ Navigated to Admin page successfully\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "steps": [
-                    {
-                      "title": "InvoiceSearchPage.navigateToInvoices - Navigate to Invoices Page",
-                      "duration": 2511
-                    },
-                    {
-                      "title": "InvoiceSearchPage.waitForInvoicesTableToLoad - Wait for Invoices Page Content to Load",
-                      "duration": 1066
-                    },
-                    {
-                      "title": "InvoiceSearchPage.searchByInvoiceNumber - Search Invoice by Number: {invoiceNum}",
-                      "duration": 1627
-                    },
-                    {
-                      "title": "InvoiceSearchPage.verifyInvoiceVisibleInTable - Verify Invoice {invoiceNum} is Visible in Table",
-                      "duration": 22
-                    }
-                  ],
-                  "startTime": "2026-05-05T05:18:51.879Z",
+                  "startTime": "2026-05-12T09:04:15.526Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\test-finished-1.png"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\video.webm"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\scrum8-SCRUM-8-Test-Case-Verify-Search-by-Invoice-Num-mroads\\trace.zip"
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Navigate-to-Admin-Page-mroads\\trace.zip"
                     }
                   ]
                 }
@@ -147,21 +128,1524 @@
               "status": "expected"
             }
           ],
-          "id": "9444fe06ba9c2e4d3eee-acdda87308f6282d0068",
-          "file": "src/test/typescript/scrum8.spec.ts",
-          "line": 3,
+          "id": "17c4bc913a4f7bbdb3e9-598bd4168bf53b8d747b",
+          "file": "src/test/typescript/addadmin.spec.ts",
+          "line": 4,
           "column": 5
+        },
+        {
+          "title": "Add New Admin User",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10126,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "vlxnwt\n"
+                    },
+                    {
+                      "text": "Generated Email: vlxnwt14350@yopmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "AddAdminPage.addAdmin - Add Admin User",
+                      "duration": 6307
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:20.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\addadmin-Add-New-Admin-User-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17c4bc913a4f7bbdb3e9-3baa3a7cd37fc402f65d",
+          "file": "src/test/typescript/addadmin.spec.ts",
+          "line": 16,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "src\\test\\typescript\\usermanagement.spec.ts",
+      "file": "src/test/typescript/usermanagement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Navigate to User Management Page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3994,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Navigated to User Management page successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.navigateToUserManagement - Navigate to User Management Page",
+                      "duration": 222
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:30.575Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Navigate-to-User-Management-Page-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Navigate-to-User-Management-Page-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Navigate-to-User-Management-Page-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-8685fb6097991b4208e6",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3699,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Total Users Count Text:151\n"
+                    },
+                    {
+                      "text": "✅ Navigated to User Management page successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getTotalUsersCount - Get Total Users Count card details in User Management Page",
+                      "duration": 59
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:34.716Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement--mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement--mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement--mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-78f3dd4272db5002402e",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "Verify total users matches pagination count in user management",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3125,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Total Users Count Text:151\n"
+                    },
+                    {
+                      "text": "Total Users: 151, Pagination Total: 151\n"
+                    },
+                    {
+                      "text": "✅ Total users count matches pagination count\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getTotalUsersCount - Get Total Users Count card details in User Management Page",
+                      "duration": 58
+                    },
+                    {
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 34
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:38.551Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-tota-eb640-on-count-in-user-management-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-tota-eb640-on-count-in-user-management-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-tota-eb640-on-count-in-user-management-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-cb84d96bd2fc58ca6573",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 34,
+          "column": 5
+        },
+        {
+          "title": "Verify active users matches pagination count of active users in user management",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13251,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Active Users Count: 149, Pagination Total: 149\n"
+                    },
+                    {
+                      "text": "✅ Active users count matches pagination count\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getTotalActiveUsersCount - Get total active users count from card",
+                      "duration": 61
+                    },
+                    {
+                      "title": "UserManagementPage.getTotalActiveUsersCount - Get total active users count from card",
+                      "duration": 32
+                    },
+                    {
+                      "title": "UserManagementPage.selectStatus - select status from dropdown",
+                      "duration": 186
+                    },
+                    {
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 41
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:41.791Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-acti-62584-ve-users-in-user-management-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-acti-62584-ve-users-in-user-management-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-acti-62584-ve-users-in-user-management-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-865ae307b82ca8092f26",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "Verify inactive users matches pagination count of active users in user management",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12876,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Inactive Users Count: 2, Pagination Total: 2\n"
+                    },
+                    {
+                      "text": "✅ Inactive users count matches pagination count\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getInActiveUsersCount - Get inactive users count from card",
+                      "duration": 63
+                    },
+                    {
+                      "title": "UserManagementPage.getInActiveUsersCount - Get inactive users count from card",
+                      "duration": 34
+                    },
+                    {
+                      "title": "UserManagementPage.selectStatus - select status from dropdown",
+                      "duration": 155
+                    },
+                    {
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 39
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:04:55.238Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-inac-64add-ve-users-in-user-management-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-5f1286497ea92d5554b7",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "Verify admin users count matches pagination count of admin users in user management",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12992,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Admin Count: 33, Pagination Total: 33\n"
+                    },
+                    {
+                      "text": "✅ Admin users count matches pagination count\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getAdminCount - Get admin count from card",
+                      "duration": 57
+                    },
+                    {
+                      "title": "UserManagementPage.getAdminCount - Get admin count from card",
+                      "duration": 31
+                    },
+                    {
+                      "title": "UserManagementPage.selectRole - select role from dropdown",
+                      "duration": 155
+                    },
+                    {
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 38
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:05:08.308Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-admi-450dc-in-users-in-user-management-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-admi-450dc-in-users-in-user-management-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-admi-450dc-in-users-in-user-management-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-73c264ea3bf20406962a",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 76,
+          "column": 5
+        },
+        {
+          "title": "Verify Managers users matches pagination count of Manager users in user management",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13174,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Manager Count: 39, Pagination Total: 39\n"
+                    },
+                    {
+                      "text": "✅ Manager users count matches pagination count\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.getManagerCount - Get manager count from card",
+                      "duration": 53
+                    },
+                    {
+                      "title": "UserManagementPage.getManagerCount - Get manager count from card",
+                      "duration": 38
+                    },
+                    {
+                      "title": "UserManagementPage.selectRole - select role from dropdown",
+                      "duration": 202
+                    },
+                    {
+                      "title": "UserManagementPage.getPaginationTotalCount - Get total count from pagination",
+                      "duration": 26
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:05:21.490Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-Mana-9ad75-er-users-in-user-management-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-Mana-9ad75-er-users-in-user-management-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-Mana-9ad75-er-users-in-user-management-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-07a6a8676b50580299eb",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "Verify add user page navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3447,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Navigated to Add User page successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.clickAddUser - Click Add User button",
+                      "duration": 170
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:05:34.911Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-add-user-page-navigation-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-add-user-page-navigation-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Verify-add-user-page-navigation-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-b41a2bb2a0393916f2bb",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 106,
+          "column": 5
+        },
+        {
+          "title": "Add New Standard User",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 19481,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3",
+                    "location": {
+                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                      "column": 29,
+                      "line": 174
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                        "column": 29,
+                        "line": 174
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m\n\u001b[2m    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "fmrmpq\n"
+                    },
+                    {
+                      "text": "Generated Email: fmrmpq92537@yopmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.addStandardUser - Add Standard User",
+                      "duration": 5554
+                    },
+                    {
+                      "title": "UserManagementPage.validateStandardUserAdded - Validate Standard User Added Successfully",
+                      "duration": 10049,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3",
+                        "location": {
+                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                          "column": 29,
+                          "line": 174
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:05:38.591Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                    "column": 29,
+                    "line": 174
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 21085,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3",
+                    "location": {
+                      "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                      "column": 29,
+                      "line": 174
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                        "column": 29,
+                        "line": 174
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m\n\u001b[2m    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\u001b[22m\n\u001b[2m    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "wcjjfu\n"
+                    },
+                    {
+                      "text": "Generated Email: wcjjfu96982@yopmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "UserManagementPage.addStandardUser - Add Standard User",
+                      "duration": 6191
+                    },
+                    {
+                      "title": "UserManagementPage.validateStandardUserAdded - Validate Standard User Added Successfully",
+                      "duration": 10036,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Admin added successfully') to be visible\u001b[22m\n\n    at UserManagementPage.call (C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts:174:29)\n    at C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\helpers\\Decorators.ts:34:37\n    at C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\usermanagement.spec.ts:129:3",
+                        "location": {
+                          "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                          "column": 29,
+                          "line": 174
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msrc\\main\\typescript\\pages\\UserManagementPage.ts:174\n\n\u001b[0m \u001b[90m 172 |\u001b[39m   \u001b[36masync\u001b[39m validateStandardUserAdded()\n \u001b[90m 173 |\u001b[39m   {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msuccessMsg()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m   }\n \u001b[90m 176 |\u001b[39m } \n \u001b[90m 177 |\u001b[39m\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:05:59.495Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\usermanagement-Add-New-Standard-User-mroads-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\main\\typescript\\pages\\UserManagementPage.ts",
+                    "column": 29,
+                    "line": 174
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "42ee30bb98636c2acf94-cf024f7e3153c759fcee",
+          "file": "src/test/typescript/usermanagement.spec.ts",
+          "line": 120,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "src\\test\\typescript\\vendormanagement.spec.ts",
+      "file": "src/test/typescript/vendormanagement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Edit Vendor Information",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6806,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Edit Vendor Information successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.editVendor - Edit Vendor",
+                      "duration": 3309
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:06:35.576Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Edit-Vendor-Information-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-8875761c50e6c104e373",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "Validate Edited Vendor Details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3141,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Validate Edited Vendor Details successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.validateVendor - Validate Vendor Details",
+                      "duration": 139
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:06:42.590Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Validate-Edited-Vendor-Details-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-c1357fe178cfb55d3a43",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 54,
+          "column": 5
+        },
+        {
+          "title": "Delete Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.deleteVendor - Delete Vendor",
+                      "duration": 1939
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:06:45.841Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Delete-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-1da0573ed56ed72e7545",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 70,
+          "column": 5
+        },
+        {
+          "title": "Search for Deleted Vendor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3104,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Delete Vendor successfully\n"
+                    },
+                    {
+                      "text": "✅ Search for Deleted Vendor successfull\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-12T09:06:51.282Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Search-for-Deleted-Vendor-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-2909811415ddbce25a68",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 81,
+          "column": 5
+        },
+        {
+          "title": "Clear Filters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4353,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Clear Filters successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.clearFilters - Clear Filters",
+                      "duration": 1007
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:06:54.506Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Clear-Filters-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-451c04c4f235e7351ae2",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 98,
+          "column": 5
+        },
+        {
+          "title": "Verify Vendor Table Headers",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3061,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Verify Vendor Table Headers successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "VendorManagementPage.verifyVendorTableHeaders - Verify Vendor Table Headers",
+                      "duration": 161
+                    }
+                  ],
+                  "startTime": "2026-05-12T09:06:58.994Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-Vendor-Table-Headers-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-bdea3fdbabe65b2f034c",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 114,
+          "column": 5
+        },
+        {
+          "title": "Verify skip1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts",
+                    "line": 126,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-12T09:07:02.159Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts",
+                        "line": 126,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-2bf809cdc95ceaa76d39",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 126,
+          "column": 6
+        },
+        {
+          "title": "Verify skip2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts",
+                    "line": 130,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mroads",
+              "projectName": "mroads",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-12T09:07:02.160Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\mroads\\playwright-sample\\src\\test\\typescript\\vendormanagement.spec.ts",
+                        "line": 130,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Verify-skip2-mroads\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "e6ab5486355e25f77599-9143e0c0770c4e130d19",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 130,
+          "column": 6
+        }
+      ],
+      "suites": [
+        {
+          "title": "Smoke Suite",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Dashboard Header Visibility",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "JiraID",
+                      "description": "FCTL-144"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "mroads",
+                  "projectName": "mroads",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3749,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "05-12-2026 14:36:25: \u001b[32mchecking if element //h1[text()='Dashboard'] exists or not\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "05-12-2026 14:36:25: \u001b[32melement with selector //h1[text()='Dashboard'] exists\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "05-12-2026 14:36:25: \u001b[32melement with selector //h1[text()='Dashboard'] is visible\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "✅ Dashboard header is visible\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "DashboardPage.dashboardHeaderVisibilty - dashboardHeaderVisibilty",
+                          "duration": 1866,
+                          "steps": [
+                            {
+                              "title": "Utility.checkIfElementExists - Check If Element Exists",
+                              "duration": 133
+                            }
+                          ]
+                        }
+                      ],
+                      "startTime": "2026-05-12T09:06:22.227Z",
+                      "annotations": [
+                        {
+                          "type": "JiraID",
+                          "description": "FCTL-144"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Dashboard-Header-Visibility-mroads\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Dashboard-Header-Visibility-mroads\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Dashboard-Header-Visibility-mroads\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6ab5486355e25f77599-42eabbf77dd49ebd197f",
+              "file": "src/test/typescript/vendormanagement.spec.ts",
+              "line": 5,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Smoke Suite",
+          "file": "src/test/typescript/vendormanagement.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Navigate to Vendor Management Page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mroads",
+                  "projectName": "mroads",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2818,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ navigated to Vendor Management page successfully\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-12T09:06:26.390Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Sui-b1116-e-to-Vendor-Management-Page-mroads\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Sui-b1116-e-to-Vendor-Management-Page-mroads\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Sui-b1116-e-to-Vendor-Management-Page-mroads\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6ab5486355e25f77599-4f75eb254d9bbe352557",
+              "file": "src/test/typescript/vendormanagement.spec.ts",
+              "line": 20,
+              "column": 5
+            },
+            {
+              "title": "Add New Vendor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mroads",
+                  "projectName": "mroads",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6043,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ New vendor added successfully\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "VendorManagementPage.addVendor - Add Vendor",
+                          "duration": 2607
+                        }
+                      ],
+                      "startTime": "2026-05-12T09:06:29.320Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Add-New-Vendor-mroads\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Add-New-Vendor-mroads\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\mroads\\playwright-sample\\test-results\\vendormanagement-Smoke-Suite-Add-New-Vendor-mroads\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6ab5486355e25f77599-12d44af526eca0d6bdb3",
+              "file": "src/test/typescript/vendormanagement.spec.ts",
+              "line": 32,
+              "column": 5
+            }
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-05T05:18:46.870Z",
-    "duration": 12132.122,
-    "expected": 1,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2026-05-12T09:04:09.640Z",
+    "duration": 172843.569,
+    "expected": 19,
+    "skipped": 2,
+    "unexpected": 1,
     "flaky": 0
   }
 }

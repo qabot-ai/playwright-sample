@@ -6,9 +6,10 @@ import { LoginPage } from '../pages/LoginPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import { VendorManagementPage } from '../pages/VendorManagementPage'
 import { AddAdminPage } from '../pages/AddAdminPage'
-import { YopmailandchangepwdPage, YopmailPage } from '../pages/YopmailandchangepwdPage'
+import { YopmailandchangepwdPage } from '../pages/YopmailandchangepwdPage'
 import { InvoiceDetailsPage } from '../pages/InvoiceDetailsPage'
 import { InvoiceSearchPage } from '../pages/InvoiceSearchPage'
+import { UserManagementPage } from '../pages/UserManagementPage'
 import ENV from '../../resources/env/env'
 
 /**
@@ -21,9 +22,10 @@ type MyFixtures = {
     dashboardPage: DashboardPage
     vendormanagementPage: VendorManagementPage
     addadminPage: AddAdminPage
-    yopmailandchangepwdPage: YopmailPage
+    yopmailandchangepwdPage: YopmailandchangepwdPage
     invoiceDetailsPage: InvoiceDetailsPage
     invoiceSearchPage: InvoiceSearchPage
+    userManagementPage: UserManagementPage
     ENV: typeof ENV
 }
 
@@ -58,6 +60,9 @@ export const test = base.extend<MyFixtures>({
     },
     invoiceSearchPage: async ({ page }, use) => {
         return await use(new InvoiceSearchPage(page))
+    },
+     userManagementPage: async ({ page }, use) => {
+        return await use(new UserManagementPage(page))
     },
     ENV: async ({}, use) => {
         return await use(ENV)

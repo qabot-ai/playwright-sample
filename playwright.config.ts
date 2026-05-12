@@ -55,8 +55,8 @@ const config: PlaywrightTestConfig = {
         {
             name: 'mroads',
             testDir: './src/test/typescript',
-            testMatch: ['scrum8.spec.ts'],
-           // testMatch: ['vendormanagement.spec.ts','addadmin.spec.ts','yopmailandchangepwd.spec.ts','invoicedetails.spec.ts','scrum7.spec.ts','scrum8.spec.ts'], // Include all tests
+        //testMatch: ['usermanagement.spec.ts'],
+         testMatch: ['vendormanagement.spec.ts','addadmin.spec.ts','usermanagement.spec.ts'], // Include all tests
             use: {
                 channel: 'chromium',
                 acceptDownloads: true,

@@ -123,3 +123,11 @@ test('Verify Vendor Table Headers',async ({ vendormanagementPage, page, ENV }) =
   await page.waitForLoadState('networkidle');
    console.log('✅ Verify Vendor Table Headers successfully');
 });
+test.skip('Verify skip1',async ({ vendormanagementPage, page, ENV }) =>
+{
+   console.log('Verify skip1');
+});
+test.skip('Verify skip2',async ({ vendormanagementPage, page, ENV }) =>
+{
+   console.log('Verify skip2');
+});
